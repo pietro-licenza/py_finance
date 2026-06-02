@@ -143,14 +143,14 @@
 **Descrição**: Configurar Django Admin para gerenciar usuários customizados
 
 **Subtarefas**:
-- [ ] 1.2.1: Abrir arquivo `users/admin.py`
-- [ ] 1.2.2: Importar UserAdmin do Django
-- [ ] 1.2.3: Importar CustomUser model
-- [ ] 1.2.4: Criar classe CustomUserAdmin herdando de UserAdmin
-- [ ] 1.2.5: Configurar list_display com email, is_staff, is_active, date_joined
-- [ ] 1.2.6: Configurar ordering = ['email']
-- [ ] 1.2.7: Registrar CustomUser com CustomUserAdmin
-- [ ] Tarefa 1.2 concluída
+- [X] 1.2.1: Abrir arquivo `users/admin.py`
+- [X] 1.2.2: Importar UserAdmin do Django
+- [X] 1.2.3: Importar CustomUser model
+- [X] 1.2.4: Criar classe UserAdmin (CustomUserAdmin) herdando de UserAdmin
+- [X] 1.2.5: Configurar list_display com email, is_staff, is_active, date_joined
+- [X] 1.2.6: Configurar ordering = ['email']
+- [X] 1.2.7: Registrar User com UserAdmin
+- [X] Tarefa 1.2 concluída
 
 #### Tarefa 1.3: Model de Profile
 **Descrição**: Criar model de perfil de usuário com informações adicionais
