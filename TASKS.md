@@ -40,26 +40,27 @@
 **Descrição**: Configurar arquivo settings.py com boas práticas
 
 **Subtarefas**:
-- [ ] 0.3.1: Criar arquivo `.env` na raiz do projeto
-- [ ] 0.3.2: Mover SECRET_KEY para arquivo `.env`
-- [ ] 0.3.3: Configurar DEBUG através de variável de ambiente
-- [ ] 0.3.4: Configurar ALLOWED_HOSTS
-- [ ] 0.3.5: Adicionar configuração para usar aspas simples no código
-- [ ] 0.3.6: Configurar LANGUAGE_CODE = 'pt-br'
-- [ ] 0.3.7: Configurar TIME_ZONE = 'America/Sao_Paulo'
-- [ ] 0.3.8: Configurar USE_I18N = True
-- [ ] 0.3.9: Configurar USE_TZ = True
+- [X] 0.3.1: Criar arquivo `.env` na raiz do projeto
+- [X] 0.3.2: Mover SECRET_KEY para arquivo `.env`
+- [X] 0.3.3: Configurar DEBUG através de variável de ambiente
+- [X] 0.3.4: Configurar ALLOWED_HOSTS
+- [X] 0.3.5: Adicionar configuração para usar aspas simples no código
+- [X] 0.3.6: Configurar LANGUAGE_CODE = 'pt-br'
+- [X] 0.3.7: Configurar TIME_ZONE = 'America/Sao_Paulo'
+- [X] 0.3.8: Configurar USE_I18N = True
+- [X] 0.3.9: Configurar USE_TZ = True
+- [X] Tarefa 0.3 concluída
 
 #### Tarefa 0.4: Criação de Apps Django
 **Descrição**: Criar todos os apps necessários do projeto
 
 **Subtarefas**:
-- [ ] 0.4.1: Criar app `users`: `python manage.py startapp users`
-- [ ] 0.4.2: Criar app `profiles`: `python manage.py startapp profiles`
-- [ ] 0.4.3: Criar app `accounts`: `python manage.py startapp accounts`
-- [ ] 0.4.4: Criar app `categories`: `python manage.py startapp categories`
-- [ ] 0.4.5: Criar app `transactions`: `python manage.py startapp transactions`
-- [ ] 0.4.6: Adicionar todos os apps em INSTALLED_APPS no settings.py:
+- [X] 0.4.1: Criar app `users`: `python manage.py startapp users`
+- [X] 0.4.2: Criar app `profiles`: `python manage.py startapp profiles`
+- [X] 0.4.3: Criar app `accounts`: `python manage.py startapp accounts`
+- [X] 0.4.4: Criar app `categories`: `python manage.py startapp categories`
+- [X] 0.4.5: Criar app `transactions`: `python manage.py startapp transactions`
+- [X] 0.4.6: Adicionar todos os apps em INSTALLED_APPS no settings.py:
   ```python
   INSTALLED_APPS = [
       'django.contrib.admin',
