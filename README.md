@@ -59,7 +59,6 @@ O projeto lê configuração sensível do arquivo `.env` (que está no `.gitigno
 ├── templates/             # Templates globais (base.html, auth/, accounts/, ...)
 ├── static/                # Assets estáticos do projeto
 ├── docs/                  # Documentação técnica
-├── agents/                # Especificações dos agentes de IA
 ├── manage.py
 ├── requirements.txt
 └── .env                   # Configuração local (git-ignored)
@@ -87,8 +86,15 @@ python manage.py check
 
 - `PRD.md` — especificação completa do produto (requisitos, design system, sprints).
 - `docs/` — arquitetura, schema do banco, padrões de código, design system.
-- `agents/` — contratos dos agentes de IA usados no desenvolvimento.
 - `CLAUDE.md` — orientações para o Claude Code trabalhar neste repositório.
+
+## Agentes de IA
+
+Os sub-agentes usados durante o desenvolvimento vivem em `.claude/agents/` (não versionado, gerado via `/agents`):
+
+- `django-backend-specialist.md` — models, CBVs, signals, autenticação por e-mail, settings.
+- `dtl-tailwind-frontend.md` — templates DTL e UI Tailwind conforme Design System.
+- `qa-playwright-validator.md` — validação visual e funcional ponta-a-ponta.
 
 ## Licença
 

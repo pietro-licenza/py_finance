@@ -68,6 +68,16 @@ These rules are binding — they shape every file in the repo. Most of them aren
 - **`settings.py` localization** must be `LANGUAGE_CODE = 'pt-br'` and `TIME_ZONE = 'America/Sao_Paulo'`.
 - **Money** is `DecimalField(max_digits=12, decimal_places=2)`; values are rendered with `R$` and the income/expense color rule above.
 
+## AI agents
+
+When delegating work, the active sub-agents are in **`.claude/agents/`** (not the root `agents/` folder, which holds an older set of reference specs). The live sub-agents are created via `/agents` and are git-ignored:
+
+- `.claude/agents/django-backend-specialist.md` — models, CBVs, signals, auth-by-email, settings.
+- `.claude/agents/dtl-tailwind-frontend.md` — DTL templates and Tailwind UI per the Design System.
+- `.claude/agents/qa-playwright-validator.md` — visual + functional end-to-end validation.
+
+Always read the sub-agent file **at `.claude/agents/`** before spawning it. The root `agents/` folder is documentation only.
+
 ## Out of scope until Sprint 5
 
 Per the PRD's RNF-005, do not invest effort in these before the consolidation sprint:
