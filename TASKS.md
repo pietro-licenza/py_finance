@@ -122,22 +122,22 @@
 
 ---
 
-### Sprint 1: Autenticação e Sistema de Usuários ✅ CONCLUÍDA
+### Sprint 1: Autenticação e Sistema de Usuários
 
 #### Tarefa 1.1: Model de Usuário Customizado
 **Descrição**: Criar model customizado que herda de User do Django para permitir login com email
 
 **Subtarefas**:
-- [ ] 1.1.1: Abrir arquivo `users/models.py`
-- [ ] 1.1.2: Importar AbstractUser e models do Django
-- [ ] 1.1.3: Criar classe CustomUser herdando de AbstractUser
-- [ ] 1.1.4: Definir campo email como único: `email = models.EmailField(unique=True)`
-- [ ] 1.1.5: Definir USERNAME_FIELD = 'email'
-- [ ] 1.1.6: Definir REQUIRED_FIELDS = []
-- [ ] 1.1.7: Adicionar campos created_at e updated_at
-- [ ] 1.1.8: Adicionar método __str__ retornando email
-- [ ] 1.1.9: Configurar AUTH_USER_MODEL = 'users.CustomUser' no settings.py
-- [ ] Tarefa 1.1 concluída
+- [X] 1.1.1: Abrir arquivo `users/models.py`
+- [X] 1.1.2: Importar AbstractUser e models do Django
+- [X] 1.1.3: Criar classe User (CustomUser) herdando de AbstractUser
+- [X] 1.1.4: Definir campo email como único: `email = models.EmailField(unique=True)`
+- [X] 1.1.5: Definir USERNAME_FIELD = 'email'
+- [X] 1.1.6: Definir REQUIRED_FIELDS = []
+- [X] 1.1.7: Adicionar campos created_at e updated_at
+- [X] 1.1.8: Adicionar método __str__ retornando email
+- [X] 1.1.9: Configurar AUTH_USER_MODEL = 'users.User' no settings.py
+- [X] Tarefa 1.1 concluída
 
 #### Tarefa 1.2: Configuração do Admin para CustomUser
 **Descrição**: Configurar Django Admin para gerenciar usuários customizados
