@@ -48,8 +48,10 @@ INSTALLED_APPS = [
     'accounts',
     'categories',
     'profiles',
+    'theme',
     'transactions',
     'users',
+    'tailwind',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +69,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,7 +126,23 @@ USE_I18N = True
 USE_TZ = True
 
 
+# TailwindCSS
+# https://django-tailwind.readthedocs.io/
+
+TAILWIND_APP_NAME = 'theme'
+
+# Path to the npm executable. Defaults to 'npm' which is resolved through
+# the system PATH. Override here (or via .env) when running in environments
+# where the binary is not on the PATH (e.g. some Windows setups, containers).
+NPM_BIN_PATH = config('NPM_BIN_PATH', default='npm')
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# Additional locations for collectstatic to find static files in addition
+# to each app's static/ directory. The root static/ folder is reserved for
+# project-level assets (e.g. favicon, third-party overrides).
+STATICFILES_DIRS = [BASE_DIR / 'static']
