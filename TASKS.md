@@ -113,11 +113,12 @@
 **Descrição**: Inicializar repositório Git e fazer commit inicial
 
 **Subtarefas**:
-- [ ] 0.7.1: Inicializar repositório Git: `git init`
-- [ ] 0.7.2: Verificar que .gitignore está configurado corretamente
-- [ ] 0.7.3: Adicionar arquivos: `git add .`
-- [ ] 0.7.4: Fazer commit inicial: `git commit -m "Initial project setup"`
-- [ ] 0.7.5: Criar arquivo README.md com informações básicas do projeto
+- [X] 0.7.1: Inicializar repositório Git: `git init`
+- [X] 0.7.2: Verificar que .gitignore está configurado corretamente
+- [X] 0.7.3: Adicionar arquivos: `git add .`
+- [X] 0.7.4: Fazer commit inicial: `git commit -m "Initial project setup"`
+- [X] 0.7.5: Criar arquivo README.md com informações básicas do projeto
+- [X] Tarefa 0.7 concluída
 
 ---
 
