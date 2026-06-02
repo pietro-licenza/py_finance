@@ -1,6 +1,6 @@
 ## Lista de Tarefas
 
-### Sprint 0: Configuração Inicial do Projeto (Setup)
+### Sprint 0: Configuração Inicial do Projeto (Setup) ✅ CONCLUÍDA
 
 #### Tarefa 0.1: Configuração do Ambiente de Desenvolvimento
 **Descrição**: Preparar ambiente local para desenvolvimento do projeto
