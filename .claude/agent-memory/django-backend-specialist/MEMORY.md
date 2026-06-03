@@ -1,0 +1,1 @@
+- [post-save-connection-inspection](post-save-connection-inspection.md) — how to inspect Django 6.0 signal receivers at runtime (avoid `_live_receivers`)
