@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LogoutView
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
@@ -15,6 +16,11 @@ class SignupView(CreateView):
     template_name = 'auth/signup.html'
     success_url = reverse_lazy('home')
 
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('dashboard')
+        return super().dispatch(request, *args, **kwargs)
+
     def form_valid(self, form):
         response = super().form_valid(form)
         login(self.request, self.object)
@@ -28,6 +34,11 @@ class LoginView(FormView):
     form_class = LoginForm
     template_name = 'auth/login.html'
     success_url = reverse_lazy('home')
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('dashboard')
+        return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
         email = form.cleaned_data.get('email')
@@ -70,4 +81,17 @@ class HomeView(TemplateView):
         if request.user.is_authenticated:
             return redirect('dashboard')
         return super().get(request, *args, **kwargs)
+
+
+class DashboardView(LoginRequiredMixin, TemplateView):
+    """Sprint 1 placeholder for the authenticated landing page.
+
+    The full dashboard (accounts overview, recent transactions, charts, etc.)
+    is delivered in Sprint 5. For now this view authenticates the user and
+    renders a friendly "welcome" page so the post-login / post-signup redirect
+    chain (HomeView -> dashboard) terminates on a real, styled page instead
+    of breaking with NoReverseMatch.
+    """
+
+    template_name = 'dashboard.html'
 

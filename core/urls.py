@@ -17,7 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from users import views as users_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # The public landing page is the project root; authenticated visitors are
+    # bounced to the dashboard (5.1) by HomeView.get.
+    path('', users_views.HomeView.as_view(), name='home'),
+    # The auth namespace lives under /auth/ for clear grouping of public pages
+    # (login, signup, logout) and to make room for other public pages at the root.
     path('auth/', include('users.urls')),
+    # The dashboard lives at the project root, not under /auth/, because it is
+    # an authenticated destination, not a public auth form. Full dashboard is
+    # built in Sprint 5; the placeholder keeps the post-login redirect chain
+    # (HomeView -> 'dashboard') from breaking with NoReverseMatch in Sprint 1.
+    path('dashboard/', users_views.DashboardView.as_view(), name='dashboard'),
 ]

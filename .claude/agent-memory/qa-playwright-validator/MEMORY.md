@@ -1,0 +1,2 @@
+- [Estado do projeto após QA 1.15](project-state-1.15.md) — Bugs BUG-001 (CSS Tailwind não compilado) e BUG-002 (URL `dashboard` ausente) registrados em 2026-06-03
+- [Revalidação QA 1.15 (12/12 PASS)](project-state-1.15-revalidation.md) — Tarefa 1.15 concluída em 2026-06-03 após correção dos dois bugs bloqueantes

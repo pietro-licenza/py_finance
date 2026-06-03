@@ -1,0 +1,29 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Credenciais inválidas. Verifique e tente novamente.
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: F
+        - generic [ref=e11]: Finanpy
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - heading "Entrar" [level=1] [ref=e14]
+          - paragraph [ref=e15]: Acesse sua conta para continuar.
+        - paragraph [ref=e17]: E-mail ou senha inválidos.
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: E-mail
+            - textbox "E-mail" [ref=e21]:
+              - /placeholder: seu@email.com
+              - text: qa.revalida.1780509998@finanpy.com
+          - generic [ref=e22]:
+            - generic [ref=e23]: Senha
+            - textbox "Senha" [ref=e24]:
+              - /placeholder: Sua senha
+          - button "Entrar" [ref=e25] [cursor=pointer]
+        - paragraph [ref=e26]:
+          - text: Não tem uma conta?
+          - link "Cadastre-se" [ref=e27] [cursor=pointer]:
+            - /url: /auth/signup/
