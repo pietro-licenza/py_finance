@@ -1,0 +1,44 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Finanpy - Sistema de gestão financeira pessoal'>
+    <title>{% block title %}Finanpy{% endblock %}</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+
+    {% tailwind_css %}
+</head>
+<body class='bg-slate-900 text-slate-100 font-sans antialiased min-h-screen'>
+
+    {% if messages %}
+        <div class='fixed top-4 right-4 z-50 space-y-2 w-full max-w-sm'>
+            {% for message in messages %}
+                <div role='alert'
+                     class='flex items-start justify-between px-4 py-3 rounded-lg shadow-lg border text-sm
+                            {% if message.tags == 'success' %}bg-emerald-500/10 border-emerald-500/30 text-emerald-300
+                            {% elif message.tags == 'error' %}bg-rose-500/10 border-rose-500/30 text-rose-300
+                            {% elif message.tags == 'warning' %}bg-amber-500/10 border-amber-500/30 text-amber-300
+                            {% else %}bg-indigo-500/10 border-indigo-500/30 text-indigo-300{% endif %}'>
+                    <span class='flex-1'>{{ message }}</span>
+                    <button type='button'
+                            onclick='this.parentElement.remove()'
+                            class='ml-3 text-current opacity-70 hover:opacity-100 transition-opacity'
+                            aria-label='Fechar'>
+                        &times;
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <main class='min-h-screen'>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
