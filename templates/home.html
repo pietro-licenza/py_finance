@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Finanpy — Controle suas finanças em um só lugar{% endblock %}
+
+{% block content %}
+
+<section class='relative overflow-hidden'>
+    <div class='absolute inset-0 bg-gradient-to-br from-violet-600/10 via-indigo-600/10 to-cyan-500/10'></div>
+    <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-600/20 rounded-full blur-3xl'></div>
+
+    <div class='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28'>
+        <div class='text-center'>
+
+            <div class='flex items-center justify-center space-x-4 mb-8'>
+                <div class='h-16 w-16 rounded-2xl bg-gradient-to-tr from-violet-600 to-cyan-500 flex items-center justify-center font-black text-white tracking-wider text-3xl shadow-lg shadow-violet-600/30'>F</div>
+                <span class='text-4xl sm:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400'>Finanpy</span>
+            </div>
+
+            <h1 class='text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6'>
+                Controle suas finanças
+                <span class='block bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400'>em um só lugar</span>
+            </h1>
+
+            <p class='mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 leading-relaxed'>
+                Organize contas, categorias e transações em uma interface simples e elegante.
+                Comece grátis em menos de um minuto.
+            </p>
+
+            <div class='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4'>
+                <a href='/auth/signup/' class='w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/30'>
+                    Criar Conta Grátis
+                </a>
+                <a href='/auth/login/' class='w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-slate-200 bg-slate-800/60 hover:bg-slate-800 border border-slate-700 hover:border-slate-600 rounded-lg transition-all duration-200'>
+                    Já tenho conta
+                </a>
+            </div>
+
+            <p class='mt-6 text-sm text-slate-500'>Sem cartão de crédito. Sem spam.</p>
+
+        </div>
+    </div>
+</section>
+
+<section class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20'>
+    <div class='text-center mb-12'>
+        <h2 class='text-3xl sm:text-4xl font-bold tracking-tight text-white'>Tudo que você precisa</h2>
+        <p class='mt-3 text-slate-400'>Funcionalidades pensadas para o dia a dia financeiro.</p>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-6'>
+
+        <div class='bg-slate-800/60 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600 transition-colors'>
+            <div class='h-12 w-12 rounded-lg bg-gradient-to-br from-violet-500/20 to-violet-500/5 border border-violet-500/30 flex items-center justify-center mb-4'>
+                <svg class='w-6 h-6 text-violet-400' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+                    <path stroke-linecap='round' stroke-linejoin='round' d='M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'/>
+                </svg>
+            </div>
+            <h3 class='text-lg font-semibold text-white mb-2'>Contas bancárias</h3>
+            <p class='text-sm text-slate-400 leading-relaxed'>Cadastre contas correntes, poupanças e carteiras. Acompanhe saldos em tempo real.</p>
+        </div>
+
+        <div class='bg-slate-800/60 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600 transition-colors'>
+            <div class='h-12 w-12 rounded-lg bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 border border-indigo-500/30 flex items-center justify-center mb-4'>
+                <svg class='w-6 h-6 text-indigo-400' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+                    <path stroke-linecap='round' stroke-linejoin='round' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'/>
+                </svg>
+            </div>
+            <h3 class='text-lg font-semibold text-white mb-2'>Categorias personalizadas</h3>
+            <p class='text-sm text-slate-400 leading-relaxed'>Crie categorias de receitas e despesas com cores. Categorias padrão já vêm prontas.</p>
+        </div>
+
+        <div class='bg-slate-800/60 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600 transition-colors'>
+            <div class='h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 border border-cyan-500/30 flex items-center justify-center mb-4'>
+                <svg class='w-6 h-6 text-cyan-400' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+                    <path stroke-linecap='round' stroke-linejoin='round' d='M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z'/>
+                </svg>
+            </div>
+            <h3 class='text-lg font-semibold text-white mb-2'>Transações detalhadas</h3>
+            <p class='text-sm text-slate-400 leading-relaxed'>Registre cada entrada e saída com data, conta, categoria e descrição. Filtros e busca.</p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

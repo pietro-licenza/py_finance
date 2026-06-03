@@ -1,8 +1,9 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LogoutView
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, FormView
+from django.views.generic import CreateView, FormView, TemplateView
 
 from .forms import LoginForm, SignupForm
 
@@ -54,4 +55,19 @@ class LogoutView(LogoutView):
     def dispatch(self, request, *args, **kwargs):
         messages.success(request, 'Você saiu da sua conta. Até logo!')
         return super().dispatch(request, *args, **kwargs)
+
+
+class HomeView(TemplateView):
+    """Public landing page shown to unauthenticated visitors.
+
+    Authenticated users are bounced to the dashboard so the marketing page
+    is only ever shown to people who haven't signed up yet.
+    """
+
+    template_name = 'home.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('dashboard')
+        return super().get(request, *args, **kwargs)
 
