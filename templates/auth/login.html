@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar — Finanpy{% endblock %}
+
+{% block content %}
+<div class='min-h-screen flex items-center justify-center px-4 py-12'>
+    <div class='w-full max-w-md'>
+
+        <div class='flex items-center justify-center space-x-3 mb-8'>
+            <div class='h-10 w-10 rounded-lg bg-gradient-to-tr from-violet-600 to-cyan-500 flex items-center justify-center font-bold text-white tracking-wider text-lg'>F</div>
+            <span class='text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400'>Finanpy</span>
+        </div>
+
+        <div class='bg-slate-800/60 border border-slate-700/50 rounded-xl p-8 shadow-xl shadow-slate-950/50'>
+
+            <div class='mb-6 text-center'>
+                <h1 class='text-2xl font-bold tracking-tight text-white'>Entrar</h1>
+                <p class='mt-2 text-sm text-slate-400'>Acesse sua conta para continuar.</p>
+            </div>
+
+            {% if form.non_field_errors %}
+                <div class='mb-4 px-3 py-2 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-sm'>
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form method='post' novalidate class='space-y-4'>
+                {% csrf_token %}
+
+                {% for field in form %}
+                    <div class='space-y-1'>
+                        <label for='{{ field.id_for_label }}' class='block text-sm font-medium text-slate-300'>
+                            {{ field.label }}
+                        </label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <p class='text-xs text-rose-400'>{{ field.errors|join:' ' }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                <button type='submit' class='w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/20 mt-6'>
+                    Entrar
+                </button>
+            </form>
+
+            <p class='mt-6 text-center text-sm text-slate-400'>
+                Não tem uma conta?
+                <a href='/auth/signup/' class='font-medium text-indigo-400 hover:text-indigo-300 transition-colors'>
+                    Cadastre-se
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
