@@ -43,3 +43,24 @@ class SignupForm(UserCreationForm):
         if email and User.objects.filter(email__iexact=email).exists():
             raise forms.ValidationError('Já existe um usuário cadastrado com este e-mail.')
         return email
+
+
+class LoginForm(forms.Form):
+    """Login form for the custom email-based User model."""
+
+    email = forms.EmailField(label='E-mail')
+    password = forms.CharField(label='Senha', widget=forms.PasswordInput)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['email'].widget.attrs.update({
+            'class': INPUT_CLASSES,
+            'placeholder': 'seu@email.com',
+            'autocomplete': 'email',
+        })
+        self.fields['password'].widget.attrs.update({
+            'class': INPUT_CLASSES,
+            'placeholder': 'Sua senha',
+            'autocomplete': 'current-password',
+        })
