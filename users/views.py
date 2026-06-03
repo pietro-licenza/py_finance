@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import LogoutView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, FormView
 
@@ -40,3 +41,17 @@ class LoginView(FormView):
         login(self.request, user)
         messages.success(self.request, f'Bem-vindo de volta, {user.email}!')
         return super().form_valid(form)
+
+
+class LogoutView(LogoutView):
+    """Logout that flashes a friendly message before signing the user out.
+
+    Wraps Django's built-in LogoutView to inject a success message into the
+    session before the user is signed out — the message will then be rendered
+    on the page the user is redirected to (LOGOUT_REDIRECT_URL).
+    """
+
+    def dispatch(self, request, *args, **kwargs):
+        messages.success(request, 'Você saiu da sua conta. Até logo!')
+        return super().dispatch(request, *args, **kwargs)
+
