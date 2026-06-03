@@ -357,26 +357,26 @@
 
 ---
 
-### Sprint 2: Gestão de Contas Bancárias ✅ CONCLUÍDA
+### Sprint 2: Gestão de Contas Bancárias
 
-#### Tarefa 2.1: Model de Account ✅
+#### Tarefa 2.1: Model de Account
 **Descrição**: Criar model para representar contas bancárias do usuário
 
 **Subtarefas**:
-- [ ] 2.1.1: Abrir arquivo `accounts/models.py`
-- [ ] 2.1.2: Importar models e get_user_model
-- [ ] 2.1.3: Criar classe Account com ForeignKey para User
-- [ ] 2.1.4: Adicionar campo name (CharField, max_length=100)
-- [ ] 2.1.5: Adicionar campo bank_name (CharField, max_length=100)
-- [ ] 2.1.6: Criar choices para account_type (CHECKING, SAVINGS, WALLET)
-- [ ] 2.1.7: Adicionar campo account_type com choices
-- [ ] 2.1.8: Adicionar campo balance (DecimalField, max_digits=12, decimal_places=2, default=0)
-- [ ] 2.1.9: Adicionar campo is_active (BooleanField, default=True)
-- [ ] 2.1.10: Adicionar campos created_at e updated_at
-- [ ] 2.1.11: Adicionar método __str__ retornando name
-- [ ] 2.1.12: Adicionar Meta com ordering, verbose_name e indexes
+- [X] 2.1.1: Abrir arquivo `accounts/models.py`
+- [X] 2.1.2: Importar models e get_user_model
+- [X] 2.1.3: Criar classe Account com ForeignKey para User
+- [X] 2.1.4: Adicionar campo name (CharField, max_length=100)
+- [X] 2.1.5: Adicionar campo bank_name (CharField, max_length=100)
+- [X] 2.1.6: Criar choices para account_type (CHECKING, SAVINGS, WALLET)
+- [X] 2.1.7: Adicionar campo account_type com choices
+- [X] 2.1.8: Adicionar campo balance (DecimalField, max_digits=12, decimal_places=2, default=0)
+- [X] 2.1.9: Adicionar campo is_active (BooleanField, default=True)
+- [X] 2.1.10: Adicionar campos created_at e updated_at
+- [X] 2.1.11: Adicionar método __str__ retornando name
+- [X] 2.1.12: Adicionar Meta com ordering, verbose_name e indexes
 
-#### Tarefa 2.2: Admin de Account ✅
+#### Tarefa 2.2: Admin de Account
 **Descrição**: Configurar Django Admin para gerenciar contas
 
 **Subtarefas**:
@@ -389,7 +389,7 @@
 - [ ] 2.2.7: Configurar readonly_fields: created_at, updated_at
 - [ ] 2.2.8: Registrar Account com AccountAdmin
 
-#### Tarefa 2.3: Form de Account ✅
+#### Tarefa 2.3: Form de Account
 **Descrição**: Criar formulário para cadastro e edição de contas
 
 **Subtarefas**:
@@ -403,7 +403,7 @@
 - [ ] 2.3.8: Adicionar placeholders nos widgets
 - [ ] 2.3.9: Configurar choices de account_type em português
 
-#### Tarefa 2.4: View de Listagem de Contas ✅
+#### Tarefa 2.4: View de Listagem de Contas
 **Descrição**: Criar view para listar contas do usuário
 
 **Subtarefas**:
@@ -418,7 +418,7 @@
 - [ ] 2.4.9: Adicionar ordenação por nome
 - [ ] 2.4.10: Adicionar cálculo de saldo total no get_context_data
 
-#### Tarefa 2.5: Template de Listagem de Contas ✅
+#### Tarefa 2.5: Template de Listagem de Contas
 **Descrição**: Criar template HTML para listar contas
 
 **Subtarefas**:
@@ -436,7 +436,7 @@
 - [ ] 2.5.12: Adicionar mensagem quando não houver contas
 - [ ] 2.5.13: Adicionar card com saldo total consolidado
 
-#### Tarefa 2.6: View de Criação de Conta ✅
+#### Tarefa 2.6: View de Criação de Conta
 **Descrição**: Criar view para cadastrar nova conta
 
 **Subtarefas**:
@@ -451,7 +451,7 @@
 - [ ] 2.6.9: Adicionar mensagem de sucesso
 - [ ] 2.6.10: Adicionar context extra com título da página
 
-#### Tarefa 2.7: View de Edição de Conta ✅
+#### Tarefa 2.7: View de Edição de Conta
 **Descrição**: Criar view para editar conta existente
 
 **Subtarefas**:
@@ -463,7 +463,7 @@
 - [ ] 2.7.6: Adicionar mensagem de sucesso
 - [ ] 2.7.7: Adicionar context extra com título
 
-#### Tarefa 2.8: View de Exclusão de Conta ✅
+#### Tarefa 2.8: View de Exclusão de Conta
 **Descrição**: Criar view para excluir conta
 
 **Subtarefas**:
@@ -476,7 +476,7 @@
 - [ ] 2.8.7: Adicionar mensagem de sucesso
 - [ ] 2.8.8: Adicionar validação para não excluir conta com transações (implementar depois)
 
-#### Tarefa 2.9: Template de Form de Conta ✅
+#### Tarefa 2.9: Template de Form de Conta
 **Descrição**: Criar template HTML para criar/editar conta
 
 **Subtarefas**:
@@ -492,7 +492,7 @@
 - [ ] 2.9.10: Adicionar botão de Cancelar
 - [ ] 2.9.11: Adicionar exibição de erros do formulário
 
-#### Tarefa 2.10: Template de Confirmação de Exclusão ✅
+#### Tarefa 2.10: Template de Confirmação de Exclusão
 **Descrição**: Criar template para confirmar exclusão de conta
 
 **Subtarefas**:
@@ -507,7 +507,7 @@
 - [ ] 2.10.9: Adicionar botão de Cancelar
 - [ ] 2.10.10: Estilizar com cores de alerta
 
-#### Tarefa 2.11: URLs de Accounts ✅
+#### Tarefa 2.11: URLs de Accounts
 **Descrição**: Configurar URLs para views de contas
 
 **Subtarefas**:
@@ -520,7 +520,7 @@
 - [ ] 2.11.7: Adicionar path para delete: path('<int:pk>/delete/', AccountDeleteView.as_view(), name='account_delete')
 - [ ] 2.11.8: No arquivo `core/urls.py`, incluir accounts.urls: path('accounts/', include('accounts.urls'))
 
-#### Tarefa 2.12: Migration de Account ✅
+#### Tarefa 2.12: Migration de Account
 **Descrição**: Criar e aplicar migration para model Account
 
 **Subtarefas**:
@@ -529,7 +529,7 @@
 - [ ] 2.12.3: Executar: `python manage.py migrate`
 - [ ] 2.12.4: Verificar tabela no banco de dados
 
-#### Tarefa 2.13: Testes Manuais de Accounts ✅
+#### Tarefa 2.13: Testes Manuais de Accounts
 **Descrição**: Testar CRUD completo de contas
 
 **Subtarefas**:
@@ -552,7 +552,7 @@
 
 ---
 
-### Sprint 3: Gestão de Categorias ✅ CONCLUÍDA
+### Sprint 3: Gestão de Categorias
 
 #### Tarefa 3.1: Model de Category
 **Descrição**: Criar model para categorias de transações
@@ -701,7 +701,7 @@
 - [ ] 3.12.5: Importar signals no apps.py
 - [ ] 3.12.6: Testar criação automática
 
-#### Tarefa 3.13: Testes Manuais de Categories ✅
+#### Tarefa 3.13: Testes Manuais de Categories
 **Descrição**: Testar CRUD de categorias
 
 **Subtarefas**:
@@ -718,7 +718,7 @@
 
 ---
 
-### Sprint 4: Gestão de Transações ✅ CONCLUÍDA
+### Sprint 4: Gestão de Transações
 
 #### Tarefa 4.1: Model de Transaction
 **Descrição**: Criar model para transações financeiras
@@ -910,7 +910,7 @@
 
 ---
 
-### Sprint 5: Dashboard e Visualizações ✅ CONCLUÍDA
+### Sprint 5: Dashboard e Visualizações
 
 #### Tarefa 5.1: View do Dashboard
 **Descrição**: Criar view principal do dashboard com estatísticas
@@ -1087,7 +1087,7 @@
 - [ ] 6.1.5: Adicionar validação de saldo suficiente (opcional)
 - [ ] 6.1.6: Testar todas as validações
 
-#### Tarefa 6.2: Ordenação e Paginação ✅
+#### Tarefa 6.2: Ordenação e Paginação
 **Descrição**: Melhorar ordenação e adicionar paginação onde necessário
 
 **Subtarefas**:
@@ -1097,7 +1097,7 @@
 - [ ] 6.2.4: Adicionar "Mostrar X por página"
 - [ ] 6.2.5: Estilizar componentes de paginação
 
-#### Tarefa 6.3: Busca e Filtros Avançados ✅
+#### Tarefa 6.3: Busca e Filtros Avançados
 **Descrição**: Implementar funcionalidades de busca
 
 **Subtarefas**:
@@ -1107,7 +1107,7 @@
 - [ ] 6.3.4: Adicionar filtros rápidos (Este Mês, Último Mês, etc)
 - [ ] 6.3.5: Salvar filtros em query string
 
-#### Tarefa 6.4: Gráficos e Visualizações (Opcional) ✅
+#### Tarefa 6.4: Gráficos e Visualizações
 **Descrição**: Adicionar gráficos simples usando Chart.js
 
 **Subtarefas**:
@@ -1117,7 +1117,7 @@
 - [ ] 6.4.4: Estilizar gráficos com tema escuro
 - [ ] 6.4.5: Adicionar responsividade aos gráficos
 
-#### Tarefa 6.5: Otimizações de Consultas ✅
+#### Tarefa 6.5: Otimizações de Consultas
 **Descrição**: Otimizar queries do banco de dados
 
 **Subtarefas**:
@@ -1139,7 +1139,7 @@
 - [ ] 6.6.6: Configurar DEBUG = False para testar
 - [ ] 6.6.7: Testar páginas de erro
 
-#### Tarefa 6.7: Documentação do Código ✅
+#### Tarefa 6.7: Documentação do Código 
 **Descrição**: Adicionar docstrings e comentários
 
 **Subtarefas**:
@@ -1149,7 +1149,7 @@
 - [ ] 6.7.4: Atualizar README.md com instruções de setup
 - [ ] 6.7.5: Documentar variáveis de ambiente necessárias
 
-#### Tarefa 6.8: Revisão de Código ✅
+#### Tarefa 6.8: Revisão de Código
 **Descrição**: Revisar código seguindo boas práticas
 
 **Subtarefas**:
@@ -1161,7 +1161,7 @@
 - [ ] 6.8.6: Verificar imports não utilizados
 - [ ] 6.8.7: Organizar imports (isort)
 
-#### Tarefa 6.9: Segurança ✅
+#### Tarefa 6.9: Segurança 
 **Descrição**: Implementar melhorias de segurança
 
 **Subtarefas**:
