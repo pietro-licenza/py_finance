@@ -1,0 +1,74 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Conta criada com sucesso.
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - heading "Minhas Contas" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Gerencie suas contas bancárias e acompanhe seus saldos.
+        - link "Nova Conta" [ref=e12] [cursor=pointer]:
+          - /url: /accounts/new/
+          - img [ref=e13]
+          - text: Nova Conta
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - paragraph [ref=e19]: Saldo total consolidado
+          - paragraph [ref=e20]: Somatório de todas as suas contas cadastradas.
+        - paragraph [ref=e21]: R$ 9.751,25
+      - generic [ref=e23]:
+        - article [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - heading "Carteira Física" [level=2] [ref=e27]
+              - paragraph [ref=e28]: Dinheiro
+            - generic [ref=e29]: Carteira
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: Saldo atual
+            - paragraph [ref=e32]: R$ 250,75
+          - generic [ref=e33]:
+            - link "Editar" [ref=e34] [cursor=pointer]:
+              - /url: /accounts/6/edit/
+              - img [ref=e35]
+              - text: Editar
+            - link "Excluir" [ref=e37] [cursor=pointer]:
+              - /url: /accounts/6/delete/
+              - img [ref=e38]
+              - text: Excluir
+        - article [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - heading "Conta Principal" [level=2] [ref=e43]
+              - paragraph [ref=e44]: Nubank
+            - generic [ref=e45]: Conta Corrente
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Saldo atual
+            - paragraph [ref=e48]: R$ 1.500,50
+          - generic [ref=e49]:
+            - link "Editar" [ref=e50] [cursor=pointer]:
+              - /url: /accounts/4/edit/
+              - img [ref=e51]
+              - text: Editar
+            - link "Excluir" [ref=e53] [cursor=pointer]:
+              - /url: /accounts/4/delete/
+              - img [ref=e54]
+              - text: Excluir
+        - article [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "Poupança Reserva" [level=2] [ref=e59]
+              - paragraph [ref=e60]: Itaú
+            - generic [ref=e61]: Conta Poupança
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: Saldo atual
+            - paragraph [ref=e64]: R$ 8.000,00
+          - generic [ref=e65]:
+            - link "Editar" [ref=e66] [cursor=pointer]:
+              - /url: /accounts/5/edit/
+              - img [ref=e67]
+              - text: Editar
+            - link "Excluir" [ref=e69] [cursor=pointer]:
+              - /url: /accounts/5/delete/
+              - img [ref=e70]
+              - text: Excluir

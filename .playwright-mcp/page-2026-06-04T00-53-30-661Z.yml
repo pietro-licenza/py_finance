@@ -1,0 +1,27 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Conta excluída com sucesso.
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - heading "Minhas Contas" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Gerencie suas contas bancárias e acompanhe seus saldos.
+        - link "Nova Conta" [ref=e12] [cursor=pointer]:
+          - /url: /accounts/new/
+          - img [ref=e13]
+          - text: Nova Conta
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - paragraph [ref=e19]: Saldo total consolidado
+          - paragraph [ref=e20]: Somatório de todas as suas contas cadastradas.
+        - paragraph [ref=e21]: R$ 0,00
+      - generic [ref=e25]:
+        - img [ref=e27]
+        - heading "Você ainda não tem contas cadastradas" [level=2] [ref=e29]
+        - paragraph [ref=e30]: Comece adicionando sua primeira conta bancária, poupança ou carteira para acompanhar seus saldos por aqui.
+        - link "Adicionar Conta" [ref=e31] [cursor=pointer]:
+          - /url: /accounts/new/
+          - img [ref=e32]
+          - text: Adicionar Conta

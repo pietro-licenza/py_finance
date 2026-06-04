@@ -184,10 +184,10 @@ class AccountDeleteView(LoginRequiredMixin, DeleteView):
     The validation must be re-introduced once the `Transaction` model
     exists (see TASKS.md item 6.1.1 - "Validar que não é possível
     excluir conta com transações"). The recommended implementation
-    is to override `delete()` (or `form_valid` / `post`) on this view
-    to check `self.get_object().transactions.exists()` and, if any
-    exist, call `messages.error(...)` and redirect back to
-    `accounts:account_list` instead of calling `super().delete()`.
+    is to override `form_valid()` on this view to check
+    `self.object.transactions.exists()` and, if any exist, call
+    `messages.error(...)` and redirect back to `accounts:account_list`
+    instead of calling `super().form_valid(form)`.
     """
 
     model = Account
@@ -206,23 +206,27 @@ class AccountDeleteView(LoginRequiredMixin, DeleteView):
         """
         return Account.objects.filter(user=self.request.user)
 
-    def delete(self, request, *args, **kwargs):
+    def form_valid(self, form):
         """Delete the account and notify the user.
 
-        `DeleteView.delete` (from `DeletionMixin`) performs the actual
-        `model.delete()` call, returns the redirect response, and
-        already enqueues nothing in `django.contrib.messages` by
-        default. We override it so we can add the success message
-        before the redirect is returned. The user is bound through
+        In Django 4.0+ `BaseDeleteView.post` inlines the form-handling
+        flow (set `self.object`, build a `Form`, validate, dispatch)
+        and calls `self.form_valid(form)` on success — it does NOT
+        delegate to `DeletionMixin.delete()` as older Django releases
+        did. `form_valid` is therefore the correct hook to enrich the
+        delete pipeline: `super().form_valid(form)` performs the
+        actual `self.object.delete()` and returns the redirect, and
+        we enqueue the success message before returning that same
+        response so `MessageMiddleware.process_response` persists it
+        for the next request to render. The user is bound through
         `get_queryset` (a foreign pk is a 404), and balance sync is
         unaffected: deletion of an `Account` does not mutate any
         other account's balance, and the `Transaction` model does not
         exist yet, so there are no balance-reversal signals to worry
         about here. If the "block delete if has transactions" rule is
-        added later, the check should live in this method (or a hook
-        called from it) so the message-and-redirect path stays in one
-        place.
+        added later, the check should live in this method so the
+        message-and-redirect path stays in one place.
         """
-        response = super().delete(request, *args, **kwargs)
+        response = super().form_valid(form)
         messages.success(self.request, 'Conta excluída com sucesso.')
         return response

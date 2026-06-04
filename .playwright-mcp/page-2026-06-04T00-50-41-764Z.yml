@@ -1,0 +1,35 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: F
+      - generic [ref=e7]: Finanpy
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - heading "Criar Conta" [level=1] [ref=e10]
+        - paragraph [ref=e11]: Comece a controlar suas finanças em poucos segundos.
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Email
+          - textbox "Email" [active] [ref=e15]:
+            - /placeholder: seu@email.com
+        - generic [ref=e16]:
+          - generic [ref=e17]: Senha
+          - textbox "Senha" [ref=e18]:
+            - /placeholder: Crie uma senha
+          - paragraph
+          - list [ref=e19]:
+            - listitem [ref=e20]: Sua senha não pode ser muito parecida com o resto das suas informações pessoais.
+            - listitem [ref=e21]: Sua senha precisa conter pelo menos 8 caracteres.
+            - listitem [ref=e22]: Sua senha não pode ser uma senha comumente utilizada.
+            - listitem [ref=e23]: Sua senha não pode ser inteiramente numérica.
+          - paragraph
+        - generic [ref=e24]:
+          - generic [ref=e25]: Confirmação de senha
+          - textbox "Confirmação de senha" [ref=e26]:
+            - /placeholder: Confirme sua senha
+          - paragraph [ref=e27]: Informe a mesma senha informada anteriormente, para verificação.
+        - button "Criar Conta" [ref=e28] [cursor=pointer]
+      - paragraph [ref=e29]:
+        - text: Já tem uma conta?
+        - link "Entrar" [ref=e30] [cursor=pointer]:
+          - /url: /auth/login/

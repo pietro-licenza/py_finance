@@ -1,0 +1,23 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "Minhas Contas" [level=1] [ref=e6]
+        - paragraph [ref=e7]: Gerencie suas contas bancárias e acompanhe seus saldos.
+      - link "Nova Conta" [ref=e8] [cursor=pointer]:
+        - /url: /accounts/new/
+        - img [ref=e9]
+        - text: Nova Conta
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Saldo total consolidado
+        - paragraph [ref=e16]: Somatório de todas as suas contas cadastradas.
+      - paragraph [ref=e17]: R$ 0,00
+    - generic [ref=e21]:
+      - img [ref=e23]
+      - heading "Você ainda não tem contas cadastradas" [level=2] [ref=e25]
+      - paragraph [ref=e26]: Comece adicionando sua primeira conta bancária, poupança ou carteira para acompanhar seus saldos por aqui.
+      - link "Adicionar Conta" [ref=e27] [cursor=pointer]:
+        - /url: /accounts/new/
+        - img [ref=e28]
+        - text: Adicionar Conta

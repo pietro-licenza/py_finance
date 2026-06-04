@@ -1,1 +1,2 @@
 - [post-save-connection-inspection](post-save-connection-inspection.md) — how to inspect Django 6.0 signal receivers at runtime (avoid `_live_receivers`)
+- [deleteview-form-valid-not-delete](deleteview-form-valid-not-delete.md) — Django 4.0+ DeleteView dispatches POST through form_valid; never override delete() for side effects

@@ -1,0 +1,28 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Confirmar exclusão" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Revise os dados antes de remover esta conta do seu cadastro.
+    - generic [ref=e8]:
+      - alert [ref=e9]:
+        - img [ref=e10]
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: Esta ação não pode ser desfeita.
+          - paragraph [ref=e14]: A conta será removida permanentemente do seu cadastro e não poderá ser recuperada.
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: Tem certeza que deseja excluir a conta a seguir?
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - heading "Conta Principal Renomeada" [level=2] [ref=e20]
+              - paragraph [ref=e21]: Nubank
+            - generic [ref=e22]: Conta Corrente
+          - generic [ref=e23]:
+            - paragraph [ref=e24]: Saldo atual
+            - paragraph [ref=e25]: R$ 1.500,50
+      - generic [ref=e27]:
+        - link "Cancelar" [ref=e28] [cursor=pointer]:
+          - /url: /accounts/
+        - button "Confirmar exclusão" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+          - text: Confirmar exclusão

@@ -1,0 +1,28 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Nova conta" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Cadastre uma nova conta para acompanhar seus saldos.
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: Nome
+        - textbox "Nome" [ref=e12]:
+          - /placeholder: "Ex.: Conta principal"
+      - generic [ref=e13]:
+        - generic [ref=e14]: Banco
+        - textbox "Banco" [ref=e15]:
+          - /placeholder: "Ex.: Nubank, Itaú, Carteira..."
+      - generic [ref=e16]:
+        - generic [ref=e17]: Tipo de conta
+        - combobox "Tipo de conta" [ref=e18]:
+          - option "Conta Corrente" [selected]
+          - option "Conta Poupança"
+          - option "Carteira"
+      - generic [ref=e19]:
+        - generic [ref=e20]: Saldo inicial
+        - spinbutton "Saldo inicial" [ref=e21]: "0"
+        - paragraph [ref=e22]: Informe o valor em reais (R$). Use ponto ou vírgula como separador decimal.
+      - generic [ref=e23]:
+        - link "Cancelar" [ref=e24] [cursor=pointer]:
+          - /url: /accounts/
+        - button "Salvar" [ref=e25] [cursor=pointer]
