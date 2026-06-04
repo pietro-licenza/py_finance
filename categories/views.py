@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import IntegrityError, transaction
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, UpdateView
 
 from .forms import CategoryForm
 from .models import Category
@@ -145,4 +145,97 @@ class CategoryCreateView(LoginRequiredMixin, CreateView):
         """
         context = super().get_context_data(**kwargs)
         context['page_title'] = 'Nova categoria'
+        return context
+
+
+class CategoryUpdateView(LoginRequiredMixin, UpdateView):
+    """Edit a category owned by the logged-in user.
+
+    The view reuses `CategoryForm` (same editable fields as create) and
+    the same `category_form.html` template. Per-user isolation is
+    enforced by overriding `get_queryset` to return only the
+    authenticated user's categories: when Django resolves the
+    `<int:pk>` from the URL through `SingleObjectMixin.get_object`, a
+    foreign pk yields no match and Django raises `Http404`, so a user
+    can never reach or mutate another user's category.
+
+    The model's `Meta.unique_together = [['user', 'name']]` constraint
+    means a rename that collides with another category owned by the
+    same user raises `IntegrityError` at the database level. The view
+    mirrors `CategoryCreateView` and translates that into a field-level
+    error on the `name` input so the template can display the message
+    next to the field instead of bubbling a 500 to the user.
+    """
+
+    model = Category
+    form_class = CategoryForm
+    template_name = 'categories/category_form.html'
+    # `categories:category_list` will be wired by Tarefa 3.10 once
+    # `categories/urls.py` declares `app_name = 'categories'`. The
+    # reverse cannot resolve until that namespace exists; that is
+    # expected and will be resolved in the URL wiring task.
+    success_url = reverse_lazy('categories:category_list')
+
+    def get_queryset(self):
+        """Return only the categories owned by the logged-in user.
+
+        This is what implements per-user isolation on update: a user
+        who passes another user's pk in the URL gets a 404 because
+        `SingleObjectMixin.get_object` cannot find the object in the
+        filtered queryset.
+        """
+        return Category.objects.filter(user=self.request.user)
+
+    def form_valid(self, form):
+        """Persist the edit and notify the user, guarding the unique name.
+
+        The `user` FK and audit fields are not on the form, so we do
+        not need to re-bind the user here — the filtered `get_queryset`
+        guarantees the instance already belongs to `self.request.user`,
+        and the `updated_at` field is refreshed automatically by
+        `auto_now=True`.
+
+        The actual save is wrapped in a `transaction.atomic` block so
+        that, if the `unique_together = [['user', 'name']]` constraint
+        is violated by a rename that collides with another of the
+        user's categories, the entire write is rolled back cleanly.
+        Catching `IntegrityError` outside the atomic block is
+        intentional: the Django docs warn against catching database
+        exceptions inside an atomic block because that would leave
+        the transaction in a broken state and any subsequent query
+        in the same request would raise `TransactionManagementError`.
+        By catching it outside, we re-render the form with
+        `form.add_error` on the `name` field and the request continues
+        normally. The success message is enqueued only when the save
+        actually commits.
+        """
+        try:
+            with transaction.atomic():
+                response = super().form_valid(form)
+        except IntegrityError:
+            # Duplicate (user, name) — translate the database error
+            # into a field-level error so the template renders it next
+            # to the `name` input. The atomic block above has already
+            # rolled back the failed save, so no partial row exists.
+            form.add_error(
+                'name',
+                'Já existe uma categoria com este nome.',
+            )
+            messages.error(
+                self.request,
+                'Já existe uma categoria com este nome.',
+            )
+            return self.form_invalid(form)
+        messages.success(self.request, 'Categoria atualizada com sucesso.')
+        return response
+
+    def get_context_data(self, **kwargs):
+        """Expose a page title for the form template.
+
+        Mirrors `CategoryCreateView` so the same `category_form.html`
+        renders the correct heading for each action. The form template
+        can read `page_title` to display "Editar categoria" here.
+        """
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = 'Editar categoria'
         return context

@@ -667,15 +667,15 @@
 - [X] 3.6.7: Adicionar mensagem de sucesso
 - [X] 3.6.8: Adicionar tratamento de erro para nome duplicado
 
-#### Tarefa 3.7: View de Edição de Categoria
+#### Tarefa 3.7: View de Edição de Categoria ✅ CONCLUÍDA
 **Descrição**: Criar view para editar categoria
 
 **Subtarefas**:
-- [ ] 3.7.1: No `categories/views.py`, importar UpdateView
-- [ ] 3.7.2: Criar CategoryUpdateView
-- [ ] 3.7.3: Configurar atributos necessários
-- [ ] 3.7.4: Override get_queryset para filtrar por usuário
-- [ ] 3.7.5: Adicionar mensagem de sucesso
+- [X] 3.7.1: No `categories/views.py`, importar UpdateView
+- [X] 3.7.2: Criar CategoryUpdateView
+- [X] 3.7.3: Configurar atributos necessários
+- [X] 3.7.4: Override get_queryset para filtrar por usuário
+- [X] 3.7.5: Adicionar mensagem de sucesso
 
 #### Tarefa 3.8: View de Exclusão de Categoria
 **Descrição**: Criar view para excluir categoria
