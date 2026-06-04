@@ -27,6 +27,11 @@ urlpatterns = [
     # The auth namespace lives under /auth/ for clear grouping of public pages
     # (login, signup, logout) and to make room for other public pages at the root.
     path('auth/', include('users.urls')),
+    # The accounts app exposes its own `accounts:` namespace under
+    # /accounts/ (see accounts/urls.py). The `include` is intentionally
+    # added alongside `users.urls` rather than nested inside it, so
+    # the two app-level URL trees stay independent.
+    path('accounts/', include('accounts.urls')),
     # The dashboard lives at the project root, not under /auth/, because it is
     # an authenticated destination, not a public auth form. Full dashboard is
     # built in Sprint 5; the placeholder keeps the post-login redirect chain
