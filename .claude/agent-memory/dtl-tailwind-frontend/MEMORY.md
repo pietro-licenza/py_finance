@@ -1,0 +1,1 @@
+- [Currency formatting](feedback_currency_format.md) — Always render BRL as `R$ {{ value|floatformat:'2g' }}` (built-in, locale-aware, no humanize).

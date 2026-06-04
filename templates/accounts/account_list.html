@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Minhas Contas — Finanpy{% endblock %}
+
+{% block content %}
+<div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8'>
+
+    {# ---- Cabeçalho ---- #}
+    <header class='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+        <div class='space-y-2'>
+            <h1 class='text-2xl font-bold tracking-tight text-white sm:text-3xl'>Minhas Contas</h1>
+            <p class='text-sm text-slate-400'>Gerencie suas contas bancárias e acompanhe seus saldos.</p>
+        </div>
+        <a href='{% url "accounts:account_create" %}'
+           class='inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/20'>
+            <svg class='w-4 h-4 mr-2' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2.5' aria-hidden='true'>
+                <path stroke-linecap='round' stroke-linejoin='round' d='M12 4v16m8-8H4'/>
+            </svg>
+            Nova Conta
+        </a>
+    </header>
+
+    {# ---- Card de saldo total consolidado ---- #}
+    <section class='relative overflow-hidden rounded-xl border border-slate-700/50 bg-slate-800/60 p-6 sm:p-8 shadow-lg shadow-black/20'>
+        <div class='absolute inset-0 bg-gradient-to-r from-violet-600/15 via-indigo-600/10 to-cyan-500/15' aria-hidden='true'></div>
+        <div class='absolute -top-24 -right-24 w-72 h-72 bg-indigo-600/20 rounded-full blur-3xl' aria-hidden='true'></div>
+
+        <div class='relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+            <div class='space-y-1'>
+                <p class='text-xs font-semibold uppercase tracking-wider text-slate-400'>Saldo total consolidado</p>
+                <p class='text-sm text-slate-400'>Somatório de todas as suas contas cadastradas.</p>
+            </div>
+            <p class='text-3xl sm:text-4xl font-extrabold tracking-tight {% if total_balance < 0 %}text-rose-400{% else %}text-white{% endif %}'>
+                R$ {{ total_balance|floatformat:'2g' }}
+            </p>
+        </div>
+    </section>
+
+    {# ---- Listagem de contas ---- #}
+    <section>
+        <div class='grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3'>
+            {% for account in accounts %}
+                <article class='flex flex-col rounded-xl border border-slate-700/50 bg-slate-800/60 p-6 shadow-lg shadow-black/10 hover:border-slate-600 transition-colors'>
+
+                    <div class='flex items-start justify-between gap-3'>
+                        <div class='space-y-1 min-w-0'>
+                            <h2 class='text-lg font-semibold text-white truncate' title='{{ account.name }}'>{{ account.name }}</h2>
+                            <p class='text-sm text-slate-400 truncate'>{{ account.bank_name }}</p>
+                        </div>
+                        <span class='inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 whitespace-nowrap'>
+                            {{ account.get_account_type_display }}
+                        </span>
+                    </div>
+
+                    {% if not account.is_active %}
+                        <p class='mt-3 inline-flex items-center self-start px-2 py-0.5 text-[11px] font-medium rounded-full bg-slate-700/60 text-slate-300 border border-slate-600'>
+                            Conta inativa
+                        </p>
+                    {% endif %}
+
+                    <div class='mt-6 pt-6 border-t border-slate-700/50'>
+                        <p class='text-xs font-medium uppercase tracking-wider text-slate-500'>Saldo atual</p>
+                        <p class='mt-1 text-2xl font-bold tracking-tight {% if account.balance < 0 %}text-rose-400{% else %}text-slate-100{% endif %}'>
+                            R$ {{ account.balance|floatformat:'2g' }}
+                        </p>
+                    </div>
+
+                    <div class='mt-6 flex items-center gap-2'>
+                        <a href='{% url "accounts:account_update" account.pk %}'
+                           class='flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-slate-200 bg-slate-700/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 rounded-lg transition-colors duration-150'>
+                            <svg class='w-4 h-4 mr-1.5' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                                <path stroke-linecap='round' stroke-linejoin='round' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'/>
+                            </svg>
+                            Editar
+                        </a>
+                        <a href='{% url "accounts:account_delete" account.pk %}'
+                           class='flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-rose-300 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 hover:border-rose-500/50 rounded-lg transition-colors duration-150'>
+                            <svg class='w-4 h-4 mr-1.5' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                                <path stroke-linecap='round' stroke-linejoin='round' d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3'/>
+                            </svg>
+                            Excluir
+                        </a>
+                    </div>
+
+                </article>
+            {% empty %}
+                {# ---- Estado vazio ---- #}
+                <div class='sm:col-span-2 xl:col-span-3'>
+                    <div class='rounded-xl border border-dashed border-slate-700 bg-slate-800/40 p-10 sm:p-14 text-center'>
+                        <div class='mx-auto h-14 w-14 rounded-2xl bg-gradient-to-tr from-violet-600/30 to-cyan-500/30 border border-slate-700 flex items-center justify-center mb-5'>
+                            <svg class='w-7 h-7 text-slate-200' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='1.8' aria-hidden='true'>
+                                <path stroke-linecap='round' stroke-linejoin='round' d='M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'/>
+                            </svg>
+                        </div>
+                        <h2 class='text-lg font-semibold text-white'>Você ainda não tem contas cadastradas</h2>
+                        <p class='mt-2 max-w-md mx-auto text-sm text-slate-400'>
+                            Comece adicionando sua primeira conta bancária, poupança ou carteira
+                            para acompanhar seus saldos por aqui.
+                        </p>
+                        <a href='{% url "accounts:account_create" %}'
+                           class='mt-6 inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/20'>
+                            <svg class='w-4 h-4 mr-2' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2.5' aria-hidden='true'>
+                                <path stroke-linecap='round' stroke-linejoin='round' d='M12 4v16m8-8H4'/>
+                            </svg>
+                            Adicionar Conta
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</div>
+{% endblock %}
