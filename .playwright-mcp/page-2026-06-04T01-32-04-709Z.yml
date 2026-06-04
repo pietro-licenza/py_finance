@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Você saiu da sua conta. Até logo!
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - heading "Minhas Categorias" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Organize suas transações com categorias personalizadas para entradas e saídas.
+        - link "Nova Categoria" [ref=e12] [cursor=pointer]:
+          - /url: /categories/new/
+          - img [ref=e13]
+          - text: Nova Categoria
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Entradas" [level=2] [ref=e17]
+          - generic [ref=e18]: (3)
+        - generic [ref=e19]:
+          - article [ref=e20]:
+            - heading "QA-3.5 Freelance" [level=3] [ref=e22]
+            - generic [ref=e23]:
+              - link "Editar" [ref=e24] [cursor=pointer]:
+                - /url: /categories/12/edit/
+                - text: Editar
+              - link "Excluir" [ref=e26] [cursor=pointer]:
+                - /url: /categories/12/delete/
+                - text: Excluir
+          - article [ref=e28]:
+            - heading "QA-3.5 Investimentos" [level=3] [ref=e30]
+            - generic [ref=e31]:
+              - link "Editar" [ref=e32] [cursor=pointer]:
+                - /url: /categories/13/edit/
+                - text: Editar
+              - link "Excluir" [ref=e34] [cursor=pointer]:
+                - /url: /categories/13/delete/
+                - text: Excluir
+          - article [ref=e36]:
+            - heading "QA-3.5 Salário" [level=3] [ref=e38]
+            - generic [ref=e39]:
+              - link "Editar" [ref=e40] [cursor=pointer]:
+                - /url: /categories/11/edit/
+                - text: Editar
+              - link "Excluir" [ref=e42] [cursor=pointer]:
+                - /url: /categories/11/delete/
+                - text: Excluir
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Saídas" [level=2] [ref=e46]
+          - generic [ref=e47]: (5)
+        - generic [ref=e48]:
+          - article [ref=e49]:
+            - heading "Alimentação (QA Sprint 3.2)" [level=3] [ref=e51]
+            - generic [ref=e52]:
+              - link "Editar" [ref=e53] [cursor=pointer]:
+                - /url: /categories/1/edit/
+                - text: Editar
+              - link "Excluir" [ref=e55] [cursor=pointer]:
+                - /url: /categories/1/delete/
+                - text: Excluir
+          - article [ref=e57]:
+            - heading "QA-3.5 Alimentação" [level=3] [ref=e59]
+            - generic [ref=e60]:
+              - link "Editar" [ref=e61] [cursor=pointer]:
+                - /url: /categories/14/edit/
+                - text: Editar
+              - link "Excluir" [ref=e63] [cursor=pointer]:
+                - /url: /categories/14/delete/
+                - text: Excluir
+          - article [ref=e65]:
+            - heading "QA-3.5 Lazer" [level=3] [ref=e67]
+            - generic [ref=e68]:
+              - link "Editar" [ref=e69] [cursor=pointer]:
+                - /url: /categories/16/edit/
+                - text: Editar
+              - link "Excluir" [ref=e71] [cursor=pointer]:
+                - /url: /categories/16/delete/
+                - text: Excluir
+          - article [ref=e73]:
+            - heading "QA-3.5 Moradia" [level=3] [ref=e75]
+            - generic [ref=e76]:
+              - link "Editar" [ref=e77] [cursor=pointer]:
+                - /url: /categories/17/edit/
+                - text: Editar
+              - link "Excluir" [ref=e79] [cursor=pointer]:
+                - /url: /categories/17/delete/
+                - text: Excluir
+          - article [ref=e81]:
+            - heading "QA-3.5 Transporte" [level=3] [ref=e83]
+            - generic [ref=e84]:
+              - link "Editar" [ref=e85] [cursor=pointer]:
+                - /url: /categories/15/edit/
+                - text: Editar
+              - link "Excluir" [ref=e87] [cursor=pointer]:
+                - /url: /categories/15/delete/
+                - text: Excluir

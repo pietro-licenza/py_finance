@@ -1,2 +1,4 @@
 - [Estado do projeto após QA 1.15](project-state-1.15.md) — Bugs BUG-001 (CSS Tailwind não compilado) e BUG-002 (URL `dashboard` ausente) registrados em 2026-06-03
 - [Revalidação QA 1.15 (12/12 PASS)](project-state-1.15-revalidation.md) — Tarefa 1.15 concluída em 2026-06-03 após correção dos dois bugs bloqueantes
+- [Revalidação QA Sprint 3.5 (5/5 PASS)](project-state-sprint-3.5-revalidation.md) — `/categories/` validado em 2026-06-04 após BUG-003 (Tailwind rebuild) e BUG-004 (residual removido)
+- [Tailwind: sempre verificar bundle antes de pedir fix](feedback-tailwind-bundle-check.md) — Computed style `rgba(0,0,0,0)` + classe certa = pedir rebuild, não debug de template

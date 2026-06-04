@@ -1,0 +1,97 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "Minhas Categorias" [level=1] [ref=e6]
+        - paragraph [ref=e7]: Organize suas transações com categorias personalizadas para entradas e saídas.
+      - link "Nova Categoria" [ref=e8] [cursor=pointer]:
+        - /url: /categories/new/
+        - img [ref=e9]
+        - text: Nova Categoria
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - heading "Entradas" [level=2] [ref=e14]
+        - generic [ref=e15]: (3)
+      - generic [ref=e16]:
+        - article [ref=e17]:
+          - heading "QA-3.5 Freelance" [level=3] [ref=e20]
+          - generic [ref=e21]:
+            - link "Editar" [ref=e22] [cursor=pointer]:
+              - /url: /categories/12/edit/
+              - img [ref=e23]
+              - text: Editar
+            - link "Excluir" [ref=e25] [cursor=pointer]:
+              - /url: /categories/12/delete/
+              - img [ref=e26]
+              - text: Excluir
+        - article [ref=e28]:
+          - heading "QA-3.5 Investimentos" [level=3] [ref=e31]
+          - generic [ref=e32]:
+            - link "Editar" [ref=e33] [cursor=pointer]:
+              - /url: /categories/13/edit/
+              - img [ref=e34]
+              - text: Editar
+            - link "Excluir" [ref=e36] [cursor=pointer]:
+              - /url: /categories/13/delete/
+              - img [ref=e37]
+              - text: Excluir
+        - article [ref=e39]:
+          - heading "QA-3.5 Salário" [level=3] [ref=e42]
+          - generic [ref=e43]:
+            - link "Editar" [ref=e44] [cursor=pointer]:
+              - /url: /categories/11/edit/
+              - img [ref=e45]
+              - text: Editar
+            - link "Excluir" [ref=e47] [cursor=pointer]:
+              - /url: /categories/11/delete/
+              - img [ref=e48]
+              - text: Excluir
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - heading "Saídas" [level=2] [ref=e53]
+        - generic [ref=e54]: (4)
+      - generic [ref=e55]:
+        - article [ref=e56]:
+          - heading "QA-3.5 Alimentação" [level=3] [ref=e59]
+          - generic [ref=e60]:
+            - link "Editar" [ref=e61] [cursor=pointer]:
+              - /url: /categories/14/edit/
+              - img [ref=e62]
+              - text: Editar
+            - link "Excluir" [ref=e64] [cursor=pointer]:
+              - /url: /categories/14/delete/
+              - img [ref=e65]
+              - text: Excluir
+        - article [ref=e67]:
+          - heading "QA-3.5 Lazer" [level=3] [ref=e70]
+          - generic [ref=e71]:
+            - link "Editar" [ref=e72] [cursor=pointer]:
+              - /url: /categories/16/edit/
+              - img [ref=e73]
+              - text: Editar
+            - link "Excluir" [ref=e75] [cursor=pointer]:
+              - /url: /categories/16/delete/
+              - img [ref=e76]
+              - text: Excluir
+        - article [ref=e78]:
+          - heading "QA-3.5 Moradia" [level=3] [ref=e81]
+          - generic [ref=e82]:
+            - link "Editar" [ref=e83] [cursor=pointer]:
+              - /url: /categories/17/edit/
+              - img [ref=e84]
+              - text: Editar
+            - link "Excluir" [ref=e86] [cursor=pointer]:
+              - /url: /categories/17/delete/
+              - img [ref=e87]
+              - text: Excluir
+        - article [ref=e89]:
+          - heading "QA-3.5 Transporte" [level=3] [ref=e92]
+          - generic [ref=e93]:
+            - link "Editar" [ref=e94] [cursor=pointer]:
+              - /url: /categories/15/edit/
+              - img [ref=e95]
+              - text: Editar
+            - link "Excluir" [ref=e97] [cursor=pointer]:
+              - /url: /categories/15/delete/
+              - img [ref=e98]
+              - text: Excluir

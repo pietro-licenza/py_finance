@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Você saiu da sua conta. Até logo!
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - heading "Minhas Categorias" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Organize suas transações com categorias personalizadas para entradas e saídas.
+        - link "Nova Categoria" [ref=e12] [cursor=pointer]:
+          - /url: /categories/new/
+          - img [ref=e13]
+          - text: Nova Categoria
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Entradas" [level=2] [ref=e18]
+          - generic [ref=e19]: (3)
+        - generic [ref=e20]:
+          - article [ref=e21]:
+            - heading "QA-3.5 Freelance" [level=3] [ref=e24]
+            - generic [ref=e25]:
+              - link "Editar" [ref=e26] [cursor=pointer]:
+                - /url: /categories/12/edit/
+                - img [ref=e27]
+                - text: Editar
+              - link "Excluir" [ref=e29] [cursor=pointer]:
+                - /url: /categories/12/delete/
+                - img [ref=e30]
+                - text: Excluir
+          - article [ref=e32]:
+            - heading "QA-3.5 Investimentos" [level=3] [ref=e35]
+            - generic [ref=e36]:
+              - link "Editar" [ref=e37] [cursor=pointer]:
+                - /url: /categories/13/edit/
+                - img [ref=e38]
+                - text: Editar
+              - link "Excluir" [ref=e40] [cursor=pointer]:
+                - /url: /categories/13/delete/
+                - img [ref=e41]
+                - text: Excluir
+          - article [ref=e43]:
+            - heading "QA-3.5 Salário" [level=3] [ref=e46]
+            - generic [ref=e47]:
+              - link "Editar" [ref=e48] [cursor=pointer]:
+                - /url: /categories/11/edit/
+                - img [ref=e49]
+                - text: Editar
+              - link "Excluir" [ref=e51] [cursor=pointer]:
+                - /url: /categories/11/delete/
+                - img [ref=e52]
+                - text: Excluir
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - heading "Saídas" [level=2] [ref=e57]
+          - generic [ref=e58]: (4)
+        - generic [ref=e59]:
+          - article [ref=e60]:
+            - heading "QA-3.5 Alimentação" [level=3] [ref=e63]
+            - generic [ref=e64]:
+              - link "Editar" [ref=e65] [cursor=pointer]:
+                - /url: /categories/14/edit/
+                - img [ref=e66]
+                - text: Editar
+              - link "Excluir" [ref=e68] [cursor=pointer]:
+                - /url: /categories/14/delete/
+                - img [ref=e69]
+                - text: Excluir
+          - article [ref=e71]:
+            - heading "QA-3.5 Lazer" [level=3] [ref=e74]
+            - generic [ref=e75]:
+              - link "Editar" [ref=e76] [cursor=pointer]:
+                - /url: /categories/16/edit/
+                - img [ref=e77]
+                - text: Editar
+              - link "Excluir" [ref=e79] [cursor=pointer]:
+                - /url: /categories/16/delete/
+                - img [ref=e80]
+                - text: Excluir
+          - article [ref=e82]:
+            - heading "QA-3.5 Moradia" [level=3] [ref=e85]
+            - generic [ref=e86]:
+              - link "Editar" [ref=e87] [cursor=pointer]:
+                - /url: /categories/17/edit/
+                - img [ref=e88]
+                - text: Editar
+              - link "Excluir" [ref=e90] [cursor=pointer]:
+                - /url: /categories/17/delete/
+                - img [ref=e91]
+                - text: Excluir
+          - article [ref=e93]:
+            - heading "QA-3.5 Transporte" [level=3] [ref=e96]
+            - generic [ref=e97]:
+              - link "Editar" [ref=e98] [cursor=pointer]:
+                - /url: /categories/15/edit/
+                - img [ref=e99]
+                - text: Editar
+              - link "Excluir" [ref=e101] [cursor=pointer]:
+                - /url: /categories/15/delete/
+                - img [ref=e102]
+                - text: Excluir
