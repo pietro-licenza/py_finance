@@ -32,9 +32,10 @@ urlpatterns = [
     # added alongside `users.urls` rather than nested inside it, so
     # the two app-level URL trees stay independent.
     path('accounts/', include('accounts.urls')),
-    # TEMPORARY for Tarefa 3.5 QA — `categories/urls.py` is a stub that
-    # Tarefa 3.10 will replace with the full CRUD wiring. Removing or
-    # editing this line is fine once 3.10 lands.
+    # The categories app exposes its own `categories:` namespace under
+    # /categories/ (see categories/urls.py). The `include` is intentionally
+    # added alongside `users.urls` and `accounts.urls` rather than nested
+    # inside them, so the three app-level URL trees stay independent.
     path('categories/', include('categories.urls')),
     # The dashboard lives at the project root, not under /auth/, because it is
     # an authenticated destination, not a public auth form. Full dashboard is

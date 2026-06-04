@@ -700,13 +700,13 @@
 - [X] 3.9.6: Adicionar mensagem de confirmação
 - [X] 3.9.7: Estilizar com cores de alerta
 
-#### Tarefa 3.10: URLs de Categories
+#### Tarefa 3.10: URLs de Categories ✅ CONCLUÍDA
 **Descrição**: Configurar URLs para views de categorias
 
 **Subtarefas**:
-- [ ] 3.10.1: Criar arquivo `categories/urls.py`
-- [ ] 3.10.2: Adicionar paths para todas as views
-- [ ] 3.10.3: Incluir no `core/urls.py`
+- [X] 3.10.1: Criar arquivo `categories/urls.py`
+- [X] 3.10.2: Adicionar paths para todas as views
+- [X] 3.10.3: Incluir no `core/urls.py`
 
 #### Tarefa 3.11: Migration de Category
 **Descrição**: Criar e aplicar migrations
