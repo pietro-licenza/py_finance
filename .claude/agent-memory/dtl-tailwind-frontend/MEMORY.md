@@ -1,1 +1,3 @@
 - [Currency formatting](feedback_currency_format.md) — Always render BRL as `R$ {{ value|floatformat:'2g' }}` (built-in, locale-aware, no humanize).
+- [Form rendering pattern](feedback_form_rendering.md) — Render ModelForm fields manually (label + widget + help_text + errors), never `{{ form.as_p }}`.
+- [Cancel button as anchor](feedback_cancel_button.md) — In CRUD forms, "Cancelar" is an `<a href='{% url "app:list" %}'>` styled as a secondary button, not a `<button>`.

@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ page_title }} — Finanpy{% endblock %}
+
+{% block content %}
+<div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8'>
+
+    {# ---- Cabeçalho da página ---- #}
+    <header class='space-y-2'>
+        <h1 class='text-2xl font-bold tracking-tight text-white sm:text-3xl'>{{ page_title }}</h1>
+        <p class='text-sm text-slate-400'>
+            {% if page_title == 'Nova conta' %}
+                Cadastre uma nova conta para acompanhar seus saldos.
+            {% else %}
+                Atualize os dados da conta selecionada.
+            {% endif %}
+        </p>
+    </header>
+
+    {# ---- Container centralizado ---- #}
+    <div class='max-w-2xl mx-auto w-full'>
+
+        {# ---- Card do formulário ---- #}
+        <section class='rounded-xl bg-slate-800/60 border border-slate-700/50 p-6 sm:p-8 shadow-lg shadow-black/10'>
+
+            {# ---- Erros não-relacionados a campos (topo do form) ---- #}
+            {% if form.non_field_errors %}
+                <div role='alert' class='mb-6 px-4 py-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-sm'>
+                    <ul class='list-disc list-inside space-y-1'>
+                        {% for error in form.non_field_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <form method='post' novalidate class='space-y-5'>
+                {% csrf_token %}
+
+                {# ---- Nome ---- #}
+                <div class='space-y-1.5'>
+                    <label for='{{ form.name.id_for_label }}' class='block text-sm font-medium text-slate-300'>
+                        {{ form.name.label }}
+                    </label>
+                    {{ form.name }}
+                    {% if form.name.help_text %}
+                        <p class='text-xs text-slate-500'>{{ form.name.help_text }}</p>
+                    {% endif %}
+                    {% if form.name.errors %}
+                        <p class='text-rose-400 text-sm mt-1'>
+                            {% for error in form.name.errors %}
+                                {{ error }}{% if not forloop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                </div>
+
+                {# ---- Banco ---- #}
+                <div class='space-y-1.5'>
+                    <label for='{{ form.bank_name.id_for_label }}' class='block text-sm font-medium text-slate-300'>
+                        {{ form.bank_name.label }}
+                    </label>
+                    {{ form.bank_name }}
+                    {% if form.bank_name.help_text %}
+                        <p class='text-xs text-slate-500'>{{ form.bank_name.help_text }}</p>
+                    {% endif %}
+                    {% if form.bank_name.errors %}
+                        <p class='text-rose-400 text-sm mt-1'>
+                            {% for error in form.bank_name.errors %}
+                                {{ error }}{% if not forloop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                </div>
+
+                {# ---- Tipo de conta ---- #}
+                <div class='space-y-1.5'>
+                    <label for='{{ form.account_type.id_for_label }}' class='block text-sm font-medium text-slate-300'>
+                        {{ form.account_type.label }}
+                    </label>
+                    {{ form.account_type }}
+                    {% if form.account_type.errors %}
+                        <p class='text-rose-400 text-sm mt-1'>
+                            {% for error in form.account_type.errors %}
+                                {{ error }}{% if not forloop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                </div>
+
+                {# ---- Saldo inicial ---- #}
+                <div class='space-y-1.5'>
+                    <label for='{{ form.balance.id_for_label }}' class='block text-sm font-medium text-slate-300'>
+                        {{ form.balance.label }}
+                    </label>
+                    {{ form.balance }}
+                    <p class='text-xs text-slate-500'>Informe o valor em reais (R$). Use ponto ou vírgula como separador decimal.</p>
+                    {% if form.balance.errors %}
+                        <p class='text-rose-400 text-sm mt-1'>
+                            {% for error in form.balance.errors %}
+                                {{ error }}{% if not forloop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                </div>
+
+                {# ---- Ações ---- #}
+                <div class='pt-4 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-end'>
+                    <a href='{% url "accounts:account_list" %}'
+                       class='inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-slate-200 bg-slate-700/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-slate-500 transition-colors duration-150'>
+                        Cancelar
+                    </a>
+                    <button type='submit'
+                            class='inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/20'>
+                        Salvar
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </div>
+
+</div>
+{% endblock %}
