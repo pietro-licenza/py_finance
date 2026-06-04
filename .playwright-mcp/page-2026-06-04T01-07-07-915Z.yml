@@ -1,0 +1,208 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo principal" [ref=e2] [cursor=pointer]:
+    - /url: "#content-start"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "Administração do Django" [ref=e7] [cursor=pointer]:
+        - /url: /admin/
+      - generic [ref=e8]:
+        - text: Bem-vindo(a),
+        - strong [ref=e9]: qa-admin@finanpy.local
+        - text: .
+        - link "Ver o site" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - text: /
+        - link "Alterar senha" [ref=e11] [cursor=pointer]:
+          - /url: /admin/password_change/
+        - text: /
+        - button "Encerrar sessão" [ref=e13] [cursor=pointer]
+        - 'button "Alternar tema (tema atual: automático)" [ref=e14] [cursor=pointer]':
+          - generic [ref=e15]: "Alternar tema (tema atual: automático)"
+          - img [ref=e16]
+    - navigation "Marcas de navegação" [ref=e18]:
+      - generic [ref=e19]:
+        - link "Início" [ref=e20] [cursor=pointer]:
+          - /url: /admin/
+        - text: ›
+        - link "Categories" [ref=e21] [cursor=pointer]:
+          - /url: /admin/categories/
+        - text: › Categorias
+    - generic [ref=e22]:
+      - button "Alternar navegação" [ref=e23] [cursor=pointer]: «
+      - navigation "Barra Lateral" [ref=e24]:
+        - searchbox "Filtrar itens de navegação" [ref=e25]
+        - table "Accounts" [ref=e27]:
+          - caption [ref=e28]:
+            - link "Accounts" [ref=e29] [cursor=pointer]:
+              - /url: /admin/accounts/
+          - rowgroup [ref=e30]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e31]:
+              - columnheader "Nome do modelo" [ref=e32]
+              - columnheader "Adicionar link" [ref=e33]
+              - columnheader "Alterar ou ver link de lista" [ref=e34]
+          - rowgroup [ref=e35]:
+            - row "Contas Adicionar" [ref=e36]:
+              - rowheader "Contas" [ref=e37]:
+                - link "Contas" [ref=e38] [cursor=pointer]:
+                  - /url: /admin/accounts/account/
+              - cell "Adicionar" [ref=e39]:
+                - link "Adicionar" [ref=e40] [cursor=pointer]:
+                  - /url: /admin/accounts/account/add/
+        - table "Autenticação e Autorização" [ref=e42]:
+          - caption [ref=e43]:
+            - link "Autenticação e Autorização" [ref=e44] [cursor=pointer]:
+              - /url: /admin/auth/
+          - rowgroup [ref=e45]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e46]:
+              - columnheader "Nome do modelo" [ref=e47]
+              - columnheader "Adicionar link" [ref=e48]
+              - columnheader "Alterar ou ver link de lista" [ref=e49]
+          - rowgroup [ref=e50]:
+            - row "Grupos Adicionar" [ref=e51]:
+              - rowheader "Grupos" [ref=e52]:
+                - link "Grupos" [ref=e53] [cursor=pointer]:
+                  - /url: /admin/auth/group/
+              - cell "Adicionar" [ref=e54]:
+                - link "Adicionar" [ref=e55] [cursor=pointer]:
+                  - /url: /admin/auth/group/add/
+        - table "Categories" [ref=e57]:
+          - caption [ref=e58]:
+            - link "Categories" [ref=e59] [cursor=pointer]:
+              - /url: /admin/categories/
+          - rowgroup [ref=e60]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e61]:
+              - columnheader "Nome do modelo" [ref=e62]
+              - columnheader "Adicionar link" [ref=e63]
+              - columnheader "Alterar ou ver link de lista" [ref=e64]
+          - rowgroup [ref=e65]:
+            - row "Categorias Adicionar" [ref=e66]:
+              - rowheader "Categorias" [ref=e67]:
+                - link "Categorias" [ref=e68] [cursor=pointer]:
+                  - /url: /admin/categories/category/
+              - cell "Adicionar" [ref=e69]:
+                - link "Adicionar" [ref=e70] [cursor=pointer]:
+                  - /url: /admin/categories/category/add/
+        - table "Profiles" [ref=e72]:
+          - caption [ref=e73]:
+            - link "Profiles" [ref=e74] [cursor=pointer]:
+              - /url: /admin/profiles/
+          - rowgroup [ref=e75]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e76]:
+              - columnheader "Nome do modelo" [ref=e77]
+              - columnheader "Adicionar link" [ref=e78]
+              - columnheader "Alterar ou ver link de lista" [ref=e79]
+          - rowgroup [ref=e80]:
+            - row "Perfis Adicionar" [ref=e81]:
+              - rowheader "Perfis" [ref=e82]:
+                - link "Perfis" [ref=e83] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/
+              - cell "Adicionar" [ref=e84]:
+                - link "Adicionar" [ref=e85] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/add/
+        - table "Users" [ref=e87]:
+          - caption [ref=e88]:
+            - link "Users" [ref=e89] [cursor=pointer]:
+              - /url: /admin/users/
+          - rowgroup [ref=e90]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e91]:
+              - columnheader "Nome do modelo" [ref=e92]
+              - columnheader "Adicionar link" [ref=e93]
+              - columnheader "Alterar ou ver link de lista" [ref=e94]
+          - rowgroup [ref=e95]:
+            - row "Users Adicionar" [ref=e96]:
+              - rowheader "Users" [ref=e97]:
+                - link "Users" [ref=e98] [cursor=pointer]:
+                  - /url: /admin/users/user/
+              - cell "Adicionar" [ref=e99]:
+                - link "Adicionar" [ref=e100] [cursor=pointer]:
+                  - /url: /admin/users/user/add/
+      - main [ref=e101]:
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - text: O categoria “
+            - link "Alimentação (QA Sprint 3.2)" [ref=e104] [cursor=pointer]:
+              - /url: /admin/categories/category/1/change/
+            - text: ” foi adicionado com sucesso.
+        - generic [ref=e105]:
+          - heading "Selecione categoria para modificar" [level=1] [ref=e106]
+          - generic [ref=e107]:
+            - list [ref=e108]:
+              - listitem [ref=e109]:
+                - link "Adicionar categoria" [ref=e110] [cursor=pointer]:
+                  - /url: /admin/categories/category/add/
+            - generic [ref=e112]:
+              - search "Filtro" [ref=e113]:
+                - heading "Filtro" [level=2] [ref=e114]
+                - heading "Mostrar contagem" [level=3] [ref=e116]:
+                  - link "Mostrar contagem" [ref=e117] [cursor=pointer]:
+                    - /url: "?_facets=True"
+                - group [ref=e118]:
+                  - generic "↓ Por tipo" [ref=e119] [cursor=pointer]
+                  - list [ref=e120]:
+                    - listitem [ref=e121]:
+                      - link "Todos" [ref=e122] [cursor=pointer]:
+                        - /url: "?"
+                    - listitem [ref=e123]:
+                      - link "Receita" [ref=e124] [cursor=pointer]:
+                        - /url: "?category_type__exact=INCOME"
+                    - listitem [ref=e125]:
+                      - link "Despesa" [ref=e126] [cursor=pointer]:
+                        - /url: "?category_type__exact=EXPENSE"
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - heading "Busca categorias" [level=2] [ref=e129]
+                  - search "Busca categorias" [ref=e130]:
+                    - generic [ref=e131]:
+                      - img "Search" [ref=e133]
+                      - textbox "Search" [ref=e134]
+                      - button "Pesquisar" [ref=e135] [cursor=pointer]
+                - generic [ref=e136]:
+                  - generic [ref=e137]:
+                    - generic [ref=e138]:
+                      - text: "Ação:"
+                      - combobox "Ação:" [ref=e139]:
+                        - option "---------" [selected]
+                        - option "Remover categorias selecionados"
+                    - button "Executar" [ref=e140] [cursor=pointer]
+                    - text: 0 de 1 selecionado
+                  - table [ref=e142]:
+                    - rowgroup [ref=e143]:
+                      - row "Selecione todos os objetos nessa página para uma ação Usuário 2 Alternar ordenção Nome 1 Alternar ordenção Tipo Cor Criada em Atualizada em" [ref=e144]:
+                        - columnheader "Selecione todos os objetos nessa página para uma ação" [ref=e145]:
+                          - checkbox "Selecione todos os objetos nessa página para uma ação" [ref=e148]
+                        - columnheader "Usuário" [ref=e149]:
+                          - button "Usuário" [ref=e151] [cursor=pointer]
+                        - columnheader "2 Alternar ordenção Nome" [ref=e152]:
+                          - generic [ref=e153]:
+                            - text: "2"
+                            - link "Alternar ordenção" [ref=e154] [cursor=pointer]:
+                              - /url: "?o=3.-2"
+                          - button "Nome" [ref=e156] [cursor=pointer]
+                        - columnheader "1 Alternar ordenção Tipo" [ref=e157]:
+                          - generic [ref=e158]:
+                            - text: "1"
+                            - link "Alternar ordenção" [ref=e159] [cursor=pointer]:
+                              - /url: "?o=-3.2"
+                          - button "Tipo" [ref=e161] [cursor=pointer]
+                        - columnheader "Cor" [ref=e162]:
+                          - button "Cor" [ref=e164] [cursor=pointer]
+                        - columnheader "Criada em" [ref=e165]:
+                          - button "Criada em" [ref=e167] [cursor=pointer]
+                        - columnheader "Atualizada em" [ref=e168]:
+                          - button "Atualizada em" [ref=e170] [cursor=pointer]
+                    - rowgroup [ref=e171]:
+                      - 'row "Selecione esse objeto para uma ação - Alimentação (QA Sprint 3.2) qa-admin@finanpy.local Alimentação (QA Sprint 3.2) Despesa #ef4444 3 de Junho de 2026 às 22:07 3 de Junho de 2026 às 22:07" [ref=e172]':
+                        - cell "Selecione esse objeto para uma ação - Alimentação (QA Sprint 3.2)" [ref=e173]:
+                          - checkbox "Selecione esse objeto para uma ação - Alimentação (QA Sprint 3.2)" [ref=e174]
+                        - rowheader "qa-admin@finanpy.local" [ref=e175]:
+                          - link "qa-admin@finanpy.local" [ref=e176] [cursor=pointer]:
+                            - /url: /admin/categories/category/1/change/
+                        - cell "Alimentação (QA Sprint 3.2)" [ref=e177]
+                        - cell "Despesa" [ref=e178]
+                        - cell "#ef4444" [ref=e179]
+                        - cell "3 de Junho de 2026 às 22:07" [ref=e180]
+                        - cell "3 de Junho de 2026 às 22:07" [ref=e181]
+                  - navigation "Paginação categorias" [ref=e183]:
+                    - heading "Paginação categorias" [level=2] [ref=e184]
+                    - text: 1 categoria
+    - contentinfo

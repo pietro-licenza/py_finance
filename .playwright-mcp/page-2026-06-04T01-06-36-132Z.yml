@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo principal" [ref=e2] [cursor=pointer]:
+    - /url: "#content-start"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "Administração do Django" [ref=e7] [cursor=pointer]:
+        - /url: /admin/
+      - generic [ref=e8]:
+        - text: Bem-vindo(a),
+        - strong [ref=e9]: qa-admin@finanpy.local
+        - text: .
+        - link "Ver o site" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - text: /
+        - link "Alterar senha" [ref=e11] [cursor=pointer]:
+          - /url: /admin/password_change/
+        - text: /
+        - button "Encerrar sessão" [ref=e13] [cursor=pointer]
+        - 'button "Alternar tema (tema atual: automático)" [ref=e14] [cursor=pointer]':
+          - generic [ref=e15]: "Alternar tema (tema atual: automático)"
+          - img [ref=e16]
+    - navigation "Marcas de navegação" [ref=e18]:
+      - generic [ref=e19]:
+        - link "Início" [ref=e20] [cursor=pointer]:
+          - /url: /admin/
+        - text: ›
+        - link "Categories" [ref=e21] [cursor=pointer]:
+          - /url: /admin/categories/
+        - text: › Categorias
+    - generic [ref=e22]:
+      - button "Alternar navegação" [ref=e23] [cursor=pointer]: «
+      - navigation "Barra Lateral" [ref=e24]:
+        - searchbox "Filtrar itens de navegação" [ref=e25]
+        - table "Accounts" [ref=e27]:
+          - caption [ref=e28]:
+            - link "Accounts" [ref=e29] [cursor=pointer]:
+              - /url: /admin/accounts/
+          - rowgroup [ref=e30]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e31]:
+              - columnheader "Nome do modelo" [ref=e32]
+              - columnheader "Adicionar link" [ref=e33]
+              - columnheader "Alterar ou ver link de lista" [ref=e34]
+          - rowgroup [ref=e35]:
+            - row "Contas Adicionar" [ref=e36]:
+              - rowheader "Contas" [ref=e37]:
+                - link "Contas" [ref=e38] [cursor=pointer]:
+                  - /url: /admin/accounts/account/
+              - cell "Adicionar" [ref=e39]:
+                - link "Adicionar" [ref=e40] [cursor=pointer]:
+                  - /url: /admin/accounts/account/add/
+        - table "Autenticação e Autorização" [ref=e42]:
+          - caption [ref=e43]:
+            - link "Autenticação e Autorização" [ref=e44] [cursor=pointer]:
+              - /url: /admin/auth/
+          - rowgroup [ref=e45]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e46]:
+              - columnheader "Nome do modelo" [ref=e47]
+              - columnheader "Adicionar link" [ref=e48]
+              - columnheader "Alterar ou ver link de lista" [ref=e49]
+          - rowgroup [ref=e50]:
+            - row "Grupos Adicionar" [ref=e51]:
+              - rowheader "Grupos" [ref=e52]:
+                - link "Grupos" [ref=e53] [cursor=pointer]:
+                  - /url: /admin/auth/group/
+              - cell "Adicionar" [ref=e54]:
+                - link "Adicionar" [ref=e55] [cursor=pointer]:
+                  - /url: /admin/auth/group/add/
+        - table "Categories" [ref=e57]:
+          - caption [ref=e58]:
+            - link "Categories" [ref=e59] [cursor=pointer]:
+              - /url: /admin/categories/
+          - rowgroup [ref=e60]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e61]:
+              - columnheader "Nome do modelo" [ref=e62]
+              - columnheader "Adicionar link" [ref=e63]
+              - columnheader "Alterar ou ver link de lista" [ref=e64]
+          - rowgroup [ref=e65]:
+            - row "Categorias Adicionar" [ref=e66]:
+              - rowheader "Categorias" [ref=e67]:
+                - link "Categorias" [ref=e68] [cursor=pointer]:
+                  - /url: /admin/categories/category/
+              - cell "Adicionar" [ref=e69]:
+                - link "Adicionar" [ref=e70] [cursor=pointer]:
+                  - /url: /admin/categories/category/add/
+        - table "Profiles" [ref=e72]:
+          - caption [ref=e73]:
+            - link "Profiles" [ref=e74] [cursor=pointer]:
+              - /url: /admin/profiles/
+          - rowgroup [ref=e75]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e76]:
+              - columnheader "Nome do modelo" [ref=e77]
+              - columnheader "Adicionar link" [ref=e78]
+              - columnheader "Alterar ou ver link de lista" [ref=e79]
+          - rowgroup [ref=e80]:
+            - row "Perfis Adicionar" [ref=e81]:
+              - rowheader "Perfis" [ref=e82]:
+                - link "Perfis" [ref=e83] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/
+              - cell "Adicionar" [ref=e84]:
+                - link "Adicionar" [ref=e85] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/add/
+        - table "Users" [ref=e87]:
+          - caption [ref=e88]:
+            - link "Users" [ref=e89] [cursor=pointer]:
+              - /url: /admin/users/
+          - rowgroup [ref=e90]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e91]:
+              - columnheader "Nome do modelo" [ref=e92]
+              - columnheader "Adicionar link" [ref=e93]
+              - columnheader "Alterar ou ver link de lista" [ref=e94]
+          - rowgroup [ref=e95]:
+            - row "Users Adicionar" [ref=e96]:
+              - rowheader "Users" [ref=e97]:
+                - link "Users" [ref=e98] [cursor=pointer]:
+                  - /url: /admin/users/user/
+              - cell "Adicionar" [ref=e99]:
+                - link "Adicionar" [ref=e100] [cursor=pointer]:
+                  - /url: /admin/users/user/add/
+      - main [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Selecione categoria para modificar" [level=1] [ref=e103]
+          - generic [ref=e104]:
+            - list [ref=e105]:
+              - listitem [ref=e106]:
+                - link "Adicionar categoria" [ref=e107] [cursor=pointer]:
+                  - /url: /admin/categories/category/add/
+            - generic [ref=e109]:
+              - search "Filtro" [ref=e110]:
+                - heading "Filtro" [level=2] [ref=e111]
+                - heading "Mostrar contagem" [level=3] [ref=e113]:
+                  - link "Mostrar contagem" [ref=e114] [cursor=pointer]:
+                    - /url: "?_facets=True"
+                - group [ref=e115]:
+                  - generic "↓ Por tipo" [ref=e116] [cursor=pointer]
+                  - list [ref=e117]:
+                    - listitem [ref=e118]:
+                      - link "Todos" [ref=e119] [cursor=pointer]:
+                        - /url: "?"
+                    - listitem [ref=e120]:
+                      - link "Receita" [ref=e121] [cursor=pointer]:
+                        - /url: "?category_type__exact=INCOME"
+                    - listitem [ref=e122]:
+                      - link "Despesa" [ref=e123] [cursor=pointer]:
+                        - /url: "?category_type__exact=EXPENSE"
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - heading "Busca categorias" [level=2] [ref=e126]
+                  - search "Busca categorias" [ref=e127]:
+                    - generic [ref=e128]:
+                      - img "Search" [ref=e130]
+                      - textbox "Search" [ref=e131]
+                      - button "Pesquisar" [ref=e132] [cursor=pointer]
+                - navigation "Paginação categorias" [ref=e135]:
+                  - heading "Paginação categorias" [level=2] [ref=e136]
+                  - text: 0 categorias
+    - contentinfo

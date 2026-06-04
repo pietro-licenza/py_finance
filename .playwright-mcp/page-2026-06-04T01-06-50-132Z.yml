@@ -1,0 +1,170 @@
+- generic [ref=e1]:
+  - link "Ir para o conteúdo principal" [ref=e2] [cursor=pointer]:
+    - /url: "#content-start"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "Administração do Django" [ref=e7] [cursor=pointer]:
+        - /url: /admin/
+      - generic [ref=e8]:
+        - text: Bem-vindo(a),
+        - strong [ref=e9]: qa-admin@finanpy.local
+        - text: .
+        - link "Ver o site" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - text: /
+        - link "Alterar senha" [ref=e11] [cursor=pointer]:
+          - /url: /admin/password_change/
+        - text: /
+        - button "Encerrar sessão" [ref=e13] [cursor=pointer]
+        - 'button "Alternar tema (tema atual: automático)" [ref=e14] [cursor=pointer]':
+          - generic [ref=e15]: "Alternar tema (tema atual: automático)"
+          - img [ref=e16]
+    - navigation "Marcas de navegação" [ref=e18]:
+      - generic [ref=e19]:
+        - link "Início" [ref=e20] [cursor=pointer]:
+          - /url: /admin/
+        - text: ›
+        - link "Categories" [ref=e21] [cursor=pointer]:
+          - /url: /admin/categories/
+        - text: ›
+        - link "Categorias" [ref=e22] [cursor=pointer]:
+          - /url: /admin/categories/category/
+        - text: › Adicionar categoria
+    - generic [ref=e23]:
+      - button "Alternar navegação" [ref=e24] [cursor=pointer]: «
+      - navigation "Barra Lateral" [ref=e25]:
+        - searchbox "Filtrar itens de navegação" [ref=e26]
+        - table "Accounts" [ref=e28]:
+          - caption [ref=e29]:
+            - link "Accounts" [ref=e30] [cursor=pointer]:
+              - /url: /admin/accounts/
+          - rowgroup [ref=e31]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e32]:
+              - columnheader "Nome do modelo" [ref=e33]
+              - columnheader "Adicionar link" [ref=e34]
+              - columnheader "Alterar ou ver link de lista" [ref=e35]
+          - rowgroup [ref=e36]:
+            - row "Contas Adicionar" [ref=e37]:
+              - rowheader "Contas" [ref=e38]:
+                - link "Contas" [ref=e39] [cursor=pointer]:
+                  - /url: /admin/accounts/account/
+              - cell "Adicionar" [ref=e40]:
+                - link "Adicionar" [ref=e41] [cursor=pointer]:
+                  - /url: /admin/accounts/account/add/
+        - table "Autenticação e Autorização" [ref=e43]:
+          - caption [ref=e44]:
+            - link "Autenticação e Autorização" [ref=e45] [cursor=pointer]:
+              - /url: /admin/auth/
+          - rowgroup [ref=e46]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e47]:
+              - columnheader "Nome do modelo" [ref=e48]
+              - columnheader "Adicionar link" [ref=e49]
+              - columnheader "Alterar ou ver link de lista" [ref=e50]
+          - rowgroup [ref=e51]:
+            - row "Grupos Adicionar" [ref=e52]:
+              - rowheader "Grupos" [ref=e53]:
+                - link "Grupos" [ref=e54] [cursor=pointer]:
+                  - /url: /admin/auth/group/
+              - cell "Adicionar" [ref=e55]:
+                - link "Adicionar" [ref=e56] [cursor=pointer]:
+                  - /url: /admin/auth/group/add/
+        - table "Categories" [ref=e58]:
+          - caption [ref=e59]:
+            - link "Categories" [ref=e60] [cursor=pointer]:
+              - /url: /admin/categories/
+          - rowgroup [ref=e61]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e62]:
+              - columnheader "Nome do modelo" [ref=e63]
+              - columnheader "Adicionar link" [ref=e64]
+              - columnheader "Alterar ou ver link de lista" [ref=e65]
+          - rowgroup [ref=e66]:
+            - row "Categorias Adicionar" [ref=e67]:
+              - rowheader "Categorias" [ref=e68]:
+                - link "Categorias" [ref=e69] [cursor=pointer]:
+                  - /url: /admin/categories/category/
+              - cell "Adicionar" [ref=e70]:
+                - link "Adicionar" [ref=e71] [cursor=pointer]:
+                  - /url: /admin/categories/category/add/
+        - table "Profiles" [ref=e73]:
+          - caption [ref=e74]:
+            - link "Profiles" [ref=e75] [cursor=pointer]:
+              - /url: /admin/profiles/
+          - rowgroup [ref=e76]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e77]:
+              - columnheader "Nome do modelo" [ref=e78]
+              - columnheader "Adicionar link" [ref=e79]
+              - columnheader "Alterar ou ver link de lista" [ref=e80]
+          - rowgroup [ref=e81]:
+            - row "Perfis Adicionar" [ref=e82]:
+              - rowheader "Perfis" [ref=e83]:
+                - link "Perfis" [ref=e84] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/
+              - cell "Adicionar" [ref=e85]:
+                - link "Adicionar" [ref=e86] [cursor=pointer]:
+                  - /url: /admin/profiles/profile/add/
+        - table "Users" [ref=e88]:
+          - caption [ref=e89]:
+            - link "Users" [ref=e90] [cursor=pointer]:
+              - /url: /admin/users/
+          - rowgroup [ref=e91]:
+            - row "Nome do modelo Adicionar link Alterar ou ver link de lista" [ref=e92]:
+              - columnheader "Nome do modelo" [ref=e93]
+              - columnheader "Adicionar link" [ref=e94]
+              - columnheader "Alterar ou ver link de lista" [ref=e95]
+          - rowgroup [ref=e96]:
+            - row "Users Adicionar" [ref=e97]:
+              - rowheader "Users" [ref=e98]:
+                - link "Users" [ref=e99] [cursor=pointer]:
+                  - /url: /admin/users/user/
+              - cell "Adicionar" [ref=e100]:
+                - link "Adicionar" [ref=e101] [cursor=pointer]:
+                  - /url: /admin/users/user/add/
+      - main [ref=e102]:
+        - generic [ref=e103]:
+          - heading "Adicionar categoria" [level=1] [ref=e104]
+          - generic [ref=e107]:
+            - group [ref=e108]:
+              - generic [ref=e111]:
+                - generic [ref=e112]: "Usuário:"
+                - generic [ref=e113]:
+                  - combobox "Usuário:" [active] [ref=e114]:
+                    - option "---------" [selected]
+                    - option "admin@example.com"
+                    - option "home-fluxo-ff3b474e@finanpy.com"
+                    - option "login-err-ad4ab732@finanpy.com"
+                    - option "login-test-6aa14997@finanpy.com"
+                    - option "logout-flow-ae1d406e@finanpy.com"
+                    - option "pietro.licenza@gmail.com"
+                    - option "qa-admin@finanpy.local"
+                    - option "qa.revalida.1780509998@finanpy.com"
+                    - option "teste.qa.1780509125@finanpy.com"
+                    - option "urls-64b12bef@finanpy.com"
+                  - generic "Alterar user selecionado" [ref=e115]
+                  - link "Adicionar outro user" [ref=e116] [cursor=pointer]:
+                    - /url: /admin/users/user/add/?_to_field=id&_popup=1
+                  - generic "Visualizar user selecionados" [ref=e117]
+              - generic [ref=e120]:
+                - generic [ref=e121]: "Nome:"
+                - textbox "Nome:" [ref=e122]
+              - generic [ref=e125]:
+                - generic [ref=e126]: "Tipo:"
+                - combobox "Tipo:" [ref=e127]:
+                  - option "---------" [selected]
+                  - option "Receita"
+                  - option "Despesa"
+              - generic [ref=e130]:
+                - generic [ref=e131]: "Cor:"
+                - textbox "Cor:" [ref=e132]: "#667eea"
+            - group "Auditoria" [ref=e133]:
+              - heading "Auditoria" [level=2] [ref=e134]
+              - generic [ref=e137]:
+                - generic [ref=e138]: "Criada em:"
+                - generic [ref=e139]: "-"
+              - generic [ref=e142]:
+                - generic [ref=e143]: "Atualizada em:"
+                - generic [ref=e144]: "-"
+            - generic [ref=e145]:
+              - button "Salvar" [ref=e146] [cursor=pointer]
+              - button "Salvar e adicionar outro(a)" [ref=e147] [cursor=pointer]
+              - button "Salvar e continuar editando" [ref=e148] [cursor=pointer]
+    - contentinfo
