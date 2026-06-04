@@ -1,0 +1,24 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Minhas Contas" [level=1] [ref=e5]
+        - paragraph [ref=e6]: Gerencie suas contas bancárias e acompanhe seus saldos.
+      - link "Nova Conta" [ref=e7] [cursor=pointer]:
+        - /url: /accounts/new/
+        - img [ref=e8]
+        - text: Nova Conta
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Saldo total consolidado
+        - paragraph [ref=e16]: Somatório de todas as suas contas cadastradas.
+      - paragraph [ref=e17]: R$ 0,00
+    - generic [ref=e21]:
+      - img [ref=e23]
+      - heading "Você ainda não tem contas cadastradas" [level=2] [ref=e25]
+      - paragraph [ref=e26]: Comece adicionando sua primeira conta bancária, poupança ou carteira para acompanhar seus saldos por aqui.
+      - link "Adicionar Conta" [ref=e27] [cursor=pointer]:
+        - /url: /accounts/new/
+        - img [ref=e28]
+        - text: Adicionar Conta

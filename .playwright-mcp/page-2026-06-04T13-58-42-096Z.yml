@@ -1,0 +1,22 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Confirmar exclusão" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Revise os dados antes de remover esta categoria do seu cadastro.
+    - generic [ref=e8]:
+      - alert [ref=e9]:
+        - img [ref=e10]
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: Esta ação não pode ser desfeita.
+          - paragraph [ref=e14]: A categoria será removida permanentemente do seu cadastro e não poderá ser recuperada.
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: Tem certeza que deseja excluir a categoria a seguir?
+        - generic [ref=e18]:
+          - heading "Pet Shop" [level=2] [ref=e21]
+          - generic [ref=e22]: Despesa
+      - generic [ref=e24]:
+        - link "Cancelar" [ref=e25] [cursor=pointer]:
+          - /url: /categories/
+        - button "Confirmar exclusão" [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - text: Confirmar exclusão

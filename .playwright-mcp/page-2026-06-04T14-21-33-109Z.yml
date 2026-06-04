@@ -1,0 +1,11 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: F
+      - generic [ref=e9]: Finanpy
+    - heading "Bem-vindo, sprint3-qa-1780581220@finanpy.com" [level=1] [ref=e10]:
+      - text: Bem-vindo,
+      - generic [ref=e11]: sprint3-qa-1780581220@finanpy.com
+    - paragraph [ref=e12]: Você está autenticado. Esta é uma página temporária da Sprint 1 — o dashboard completo com contas, categorias e transações chega na Sprint 5.
+    - button "Sair" [ref=e14] [cursor=pointer]

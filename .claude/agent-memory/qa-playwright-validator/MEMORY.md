@@ -2,3 +2,6 @@
 - [Revalidação QA 1.15 (12/12 PASS)](project-state-1.15-revalidation.md) — Tarefa 1.15 concluída em 2026-06-03 após correção dos dois bugs bloqueantes
 - [Revalidação QA Sprint 3.5 (5/5 PASS)](project-state-sprint-3.5-revalidation.md) — `/categories/` validado em 2026-06-04 após BUG-003 (Tailwind rebuild) e BUG-004 (residual removido)
 - [Tailwind: sempre verificar bundle antes de pedir fix](feedback-tailwind-bundle-check.md) — Computed style `rgba(0,0,0,0)` + classe certa = pedir rebuild, não debug de template
+- [QA Sprint 3 Categorias (2026-06-04)](project-state-sprint-3-qa.md) — 10/10 funcional PASS, 2 bugs visuais: V-07 (sidebar shell ausente) e V-10 (focus ring `ring-violet-500` → cai em `blue-600`)
+- [Sprint 3 regression (2026-06-04)](project-state-sprint3-regress.md) — BUG-006 PASS, BUG-005/BUG-007 fix is BROKEN (see [[bug-008-block-content-wrapper]])
+- [BUG-008: base.html block content wrapper](bug-008-block-content-wrapper.md) — `{% block content %}` wrapping an `{% if %}` + `{{ block.super }}` does NOT work in Django template inheritance. Child block replaces parent entirely.

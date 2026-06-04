@@ -1,0 +1,43 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - text: "{# Sidebar do shell autenticado. Incluido a partir de base.html quando user.is_authenticated. Resolve o item ativo via request.resolver_match (server-side, sem JS). O link de Transacoes usa '#' como placeholder ate a Sprint 4 conectar transactions:transaction_list em core/urls.py. #}"
+    - complementary [ref=e4]:
+      - link "F Finanpy" [ref=e5] [cursor=pointer]:
+        - /url: /dashboard/
+        - generic [ref=e6]: F
+        - generic [ref=e7]: Finanpy
+      - navigation "Navegacao principal" [ref=e8]:
+        - link "Dashboard" [ref=e9] [cursor=pointer]:
+          - /url: /dashboard/
+          - img [ref=e10]
+          - text: Dashboard
+        - link "Contas" [ref=e12] [cursor=pointer]:
+          - /url: /accounts/
+          - img [ref=e13]
+          - text: Contas
+        - link "Categorias" [ref=e15] [cursor=pointer]:
+          - /url: /categories/
+          - img [ref=e16]
+          - text: Categorias
+        - link "Transacoes em breve" [disabled] [ref=e18]:
+          - /url: "#"
+          - img [ref=e19]
+          - text: Transacoes
+          - generic [ref=e21]: em breve
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - paragraph [ref=e24]: Logado como
+          - paragraph [ref=e25]: sprint3-final-1780584240@finanpy.com
+        - button "Sair" [ref=e27] [cursor=pointer]:
+          - img [ref=e28]
+          - text: Sair
+    - generic [ref=e32]:
+      - generic:
+        - generic:
+          - generic [ref=e33]: F
+          - generic [ref=e34]: Finanpy
+        - heading "Bem-vindo, sprint3-final-1780584240@finanpy.com" [level=1]:
+          - text: Bem-vindo,
+          - generic: sprint3-final-1780584240@finanpy.com
+        - paragraph: Você está autenticado. Esta é uma página temporária da Sprint 1 — o dashboard completo com contas, categorias e transações chega na Sprint 5.
+        - button "Sair" [ref=e35] [cursor=pointer]

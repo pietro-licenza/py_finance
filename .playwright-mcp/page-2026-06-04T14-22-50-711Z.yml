@@ -1,0 +1,14 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - alert [ref=e3]:
+    - generic [ref=e4]: Você saiu da sua conta. Até logo!
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: F
+      - generic [ref=e13]: Finanpy
+    - heading "Bem-vindo, sprint3-qa-1780581220@finanpy.com" [level=1] [ref=e14]:
+      - text: Bem-vindo,
+      - generic [ref=e15]: sprint3-qa-1780581220@finanpy.com
+    - paragraph [ref=e16]: Você está autenticado. Esta é uma página temporária da Sprint 1 — o dashboard completo com contas, categorias e transações chega na Sprint 5.
+    - button "Sair" [ref=e18] [cursor=pointer]

@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - heading "Confirmar exclusão" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Revise os dados antes de remover esta categoria do seu cadastro.
+    - generic [ref=e7]:
+      - alert [ref=e8]:
+        - img [ref=e9]
+        - generic [ref=e11]:
+          - paragraph [ref=e12]: Esta ação não pode ser desfeita.
+          - paragraph [ref=e13]: A categoria será removida permanentemente do seu cadastro e não poderá ser recuperada.
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Tem certeza que deseja excluir a categoria a seguir?
+        - generic [ref=e17]:
+          - heading "Pet Shop" [level=2] [ref=e20]
+          - generic [ref=e21]: Despesa
+      - generic [ref=e23]:
+        - link "Cancelar" [ref=e24] [cursor=pointer]:
+          - /url: /categories/
+        - button "Confirmar exclusão" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Confirmar exclusão

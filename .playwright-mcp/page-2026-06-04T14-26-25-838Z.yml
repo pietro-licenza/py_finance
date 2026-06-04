@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - alert [ref=e3]:
+    - generic [ref=e4]: Categoria excluída com sucesso.
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Minhas Categorias" [level=1] [ref=e9]
+        - paragraph [ref=e10]: Organize suas transações com categorias personalizadas para entradas e saídas.
+      - link "Nova Categoria" [ref=e11] [cursor=pointer]:
+        - /url: /categories/new/
+        - img [ref=e12]
+        - text: Nova Categoria
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "Entradas" [level=2] [ref=e17]
+        - generic [ref=e18]: (5)
+      - generic [ref=e19]:
+        - article [ref=e20]:
+          - heading "Comissões e Bônus" [level=3] [ref=e23]
+          - generic [ref=e24]:
+            - link "Editar" [ref=e25] [cursor=pointer]:
+              - /url: /categories/59/edit/
+              - img [ref=e26]
+              - text: Editar
+            - link "Excluir" [ref=e28] [cursor=pointer]:
+              - /url: /categories/59/delete/
+              - img [ref=e29]
+              - text: Excluir
+        - article [ref=e31]:
+          - heading "Freelance" [level=3] [ref=e34]
+          - generic [ref=e35]:
+            - link "Editar" [ref=e36] [cursor=pointer]:
+              - /url: /categories/47/edit/
+              - img [ref=e37]
+              - text: Editar
+            - link "Excluir" [ref=e39] [cursor=pointer]:
+              - /url: /categories/47/delete/
+              - img [ref=e40]
+              - text: Excluir
+        - article [ref=e42]:
+          - heading "Investimentos" [level=3] [ref=e45]
+          - generic [ref=e46]:
+            - link "Editar" [ref=e47] [cursor=pointer]:
+              - /url: /categories/48/edit/
+              - img [ref=e48]
+              - text: Editar
+            - link "Excluir" [ref=e50] [cursor=pointer]:
+              - /url: /categories/48/delete/
+              - img [ref=e51]
+              - text: Excluir
+        - article [ref=e53]:
+          - heading "Outros (Receita)" [level=3] [ref=e56]
+          - generic [ref=e57]:
+            - link "Editar" [ref=e58] [cursor=pointer]:
+              - /url: /categories/49/edit/
+              - img [ref=e59]
+              - text: Editar
+            - link "Excluir" [ref=e61] [cursor=pointer]:
+              - /url: /categories/49/delete/
+              - img [ref=e62]
+              - text: Excluir
+        - article [ref=e64]:
+          - heading "Salário" [level=3] [ref=e67]
+          - generic [ref=e68]:
+            - link "Editar" [ref=e69] [cursor=pointer]:
+              - /url: /categories/46/edit/
+              - img [ref=e70]
+              - text: Editar
+            - link "Excluir" [ref=e72] [cursor=pointer]:
+              - /url: /categories/46/delete/
+              - img [ref=e73]
+              - text: Excluir
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - heading "Saídas" [level=2] [ref=e78]
+        - generic [ref=e79]: (9)
+      - generic [ref=e80]:
+        - article [ref=e81]:
+          - heading "Alimentação" [level=3] [ref=e84]
+          - generic [ref=e85]:
+            - link "Editar" [ref=e86] [cursor=pointer]:
+              - /url: /categories/50/edit/
+              - img [ref=e87]
+              - text: Editar
+            - link "Excluir" [ref=e89] [cursor=pointer]:
+              - /url: /categories/50/delete/
+              - img [ref=e90]
+              - text: Excluir
+        - article [ref=e92]:
+          - heading "Compras" [level=3] [ref=e95]
+          - generic [ref=e96]:
+            - link "Editar" [ref=e97] [cursor=pointer]:
+              - /url: /categories/57/edit/
+              - img [ref=e98]
+              - text: Editar
+            - link "Excluir" [ref=e100] [cursor=pointer]:
+              - /url: /categories/57/delete/
+              - img [ref=e101]
+              - text: Excluir
+        - article [ref=e103]:
+          - heading "Contas" [level=3] [ref=e106]
+          - generic [ref=e107]:
+            - link "Editar" [ref=e108] [cursor=pointer]:
+              - /url: /categories/56/edit/
+              - img [ref=e109]
+              - text: Editar
+            - link "Excluir" [ref=e111] [cursor=pointer]:
+              - /url: /categories/56/delete/
+              - img [ref=e112]
+              - text: Excluir
+        - article [ref=e114]:
+          - heading "Educação" [level=3] [ref=e117]
+          - generic [ref=e118]:
+            - link "Editar" [ref=e119] [cursor=pointer]:
+              - /url: /categories/54/edit/
+              - img [ref=e120]
+              - text: Editar
+            - link "Excluir" [ref=e122] [cursor=pointer]:
+              - /url: /categories/54/delete/
+              - img [ref=e123]
+              - text: Excluir
+        - article [ref=e125]:
+          - heading "Lazer" [level=3] [ref=e128]
+          - generic [ref=e129]:
+            - link "Editar" [ref=e130] [cursor=pointer]:
+              - /url: /categories/55/edit/
+              - img [ref=e131]
+              - text: Editar
+            - link "Excluir" [ref=e133] [cursor=pointer]:
+              - /url: /categories/55/delete/
+              - img [ref=e134]
+              - text: Excluir
+        - article [ref=e136]:
+          - heading "Moradia" [level=3] [ref=e139]
+          - generic [ref=e140]:
+            - link "Editar" [ref=e141] [cursor=pointer]:
+              - /url: /categories/52/edit/
+              - img [ref=e142]
+              - text: Editar
+            - link "Excluir" [ref=e144] [cursor=pointer]:
+              - /url: /categories/52/delete/
+              - img [ref=e145]
+              - text: Excluir
+        - article [ref=e147]:
+          - heading "Outros (Despesa)" [level=3] [ref=e150]
+          - generic [ref=e151]:
+            - link "Editar" [ref=e152] [cursor=pointer]:
+              - /url: /categories/58/edit/
+              - img [ref=e153]
+              - text: Editar
+            - link "Excluir" [ref=e155] [cursor=pointer]:
+              - /url: /categories/58/delete/
+              - img [ref=e156]
+              - text: Excluir
+        - article [ref=e158]:
+          - heading "Saúde" [level=3] [ref=e161]
+          - generic [ref=e162]:
+            - link "Editar" [ref=e163] [cursor=pointer]:
+              - /url: /categories/53/edit/
+              - img [ref=e164]
+              - text: Editar
+            - link "Excluir" [ref=e166] [cursor=pointer]:
+              - /url: /categories/53/delete/
+              - img [ref=e167]
+              - text: Excluir
+        - article [ref=e169]:
+          - heading "Transporte" [level=3] [ref=e172]
+          - generic [ref=e173]:
+            - link "Editar" [ref=e174] [cursor=pointer]:
+              - /url: /categories/51/edit/
+              - img [ref=e175]
+              - text: Editar
+            - link "Excluir" [ref=e177] [cursor=pointer]:
+              - /url: /categories/51/delete/
+              - img [ref=e178]
+              - text: Excluir

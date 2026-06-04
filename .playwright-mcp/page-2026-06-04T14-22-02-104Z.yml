@@ -1,0 +1,26 @@
+- generic [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - heading "Nova categoria" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Cadastre uma nova categoria para classificar suas transações.
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: Nome
+        - textbox "Nome" [active] [ref=e11]:
+          - /placeholder: "Ex.: Alimentação"
+      - generic [ref=e12]:
+        - generic [ref=e13]: Tipo
+        - combobox "Tipo" [ref=e14]:
+          - option "---------" [selected]
+          - option "Receita"
+          - option "Despesa"
+        - paragraph [ref=e15]: Define se a categoria será usada para entradas ou saídas.
+      - generic [ref=e16]:
+        - generic [ref=e17]: Cor
+        - textbox "Cor" [ref=e20]: "#667eea"
+        - paragraph [ref=e21]: Escolha uma cor para identificar a categoria nos lançamentos.
+      - generic [ref=e22]:
+        - link "Cancelar" [ref=e23] [cursor=pointer]:
+          - /url: /categories/
+        - button "Salvar" [ref=e24] [cursor=pointer]

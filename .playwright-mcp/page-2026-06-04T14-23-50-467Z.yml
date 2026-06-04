@@ -1,0 +1,26 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: F
+      - generic [ref=e6]: Finanpy
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Entrar" [level=1] [ref=e9]
+        - paragraph [ref=e10]: Acesse sua conta para continuar.
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: E-mail
+          - textbox "E-mail" [ref=e14]:
+            - /placeholder: seu@email.com
+            - text: bug001_retest@qa-test.local
+        - generic [ref=e15]:
+          - generic [ref=e16]: Senha
+          - textbox "Senha" [ref=e17]:
+            - /placeholder: Sua senha
+            - text: TestPass1234!
+        - button "Entrar" [ref=e18] [cursor=pointer]
+      - paragraph [ref=e19]:
+        - text: Não tem uma conta?
+        - link "Cadastre-se" [ref=e20] [cursor=pointer]:
+          - /url: /auth/signup/

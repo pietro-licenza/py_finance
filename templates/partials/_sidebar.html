@@ -1,0 +1,73 @@
+{% comment %}
+Sidebar do shell autenticado. Incluido a partir de base.html quando
+user.is_authenticated. Resolve o item ativo via request.resolver_match
+(server-side, sem JS). O link de Transacoes usa '#' como placeholder
+ate a Sprint 4 conectar transactions:transaction_list em core/urls.py.
+{% endcomment %}
+<aside class='w-full bg-slate-950 border-b border-slate-800 p-6
+            md:w-64 md:shrink-0 md:border-b-0 md:border-r md:min-h-screen md:sticky md:top-0 md:self-start'>
+    <a href='{% url "dashboard" %}'
+       class='flex items-center space-x-3 mb-8 group'>
+        <span class='h-8 w-8 rounded-lg bg-gradient-to-tr from-violet-600 to-cyan-500 flex items-center justify-center font-bold text-white tracking-wider'>F</span>
+        <span class='text-xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400'>Finanpy</span>
+    </a>
+
+    <nav class='space-y-1' aria-label='Navegacao principal'>
+        <a href='{% url "dashboard" %}'
+           class='flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors
+                  {% if request.resolver_match.url_name == "dashboard" %}bg-slate-800/80 text-white{% else %}text-slate-300 hover:bg-slate-800/60 hover:text-white{% endif %}'>
+            <svg class='w-4 h-4 shrink-0' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                <path stroke-linecap='round' stroke-linejoin='round' d='M3 12l2-2m0 0l7-7 7 7m-9 2v8a1 1 0 001 1h3m4-9l2 2m-2-2v8a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-3a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 001 1m-4 0h4'/>
+            </svg>
+            Dashboard
+        </a>
+
+        <a href='{% url "accounts:account_list" %}'
+           class='flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors
+                  {% if request.resolver_match.url_name == "account_list" or request.resolver_match.url_name == "account_create" or request.resolver_match.url_name == "account_update" or request.resolver_match.url_name == "account_delete" %}bg-slate-800/80 text-white{% else %}text-slate-300 hover:bg-slate-800/60 hover:text-white{% endif %}'>
+            <svg class='w-4 h-4 shrink-0' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                <path stroke-linecap='round' stroke-linejoin='round' d='M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'/>
+            </svg>
+            Contas
+        </a>
+
+        <a href='{% url "categories:category_list" %}'
+           class='flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors
+                  {% if request.resolver_match.url_name == "category_list" or request.resolver_match.url_name == "category_create" or request.resolver_match.url_name == "category_update" or request.resolver_match.url_name == "category_delete" %}bg-slate-800/80 text-white{% else %}text-slate-300 hover:bg-slate-800/60 hover:text-white{% endif %}'>
+            <svg class='w-4 h-4 shrink-0' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                <path stroke-linecap='round' stroke-linejoin='round' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'/>
+            </svg>
+            Categorias
+        </a>
+
+        <a href='#'
+           aria-disabled='true'
+           title='Disponivel na Sprint 4'
+           class='flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-slate-500 cursor-not-allowed
+                  {% if request.resolver_match.url_name == "transaction_list" or request.resolver_match.url_name == "transaction_create" or request.resolver_match.url_name == "transaction_update" or request.resolver_match.url_name == "transaction_delete" %}bg-slate-800/80 text-white{% endif %}'>
+            <svg class='w-4 h-4 shrink-0' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                <path stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'/>
+            </svg>
+            Transacoes
+            <span class='ml-auto text-[10px] font-semibold uppercase tracking-wider text-slate-500 bg-slate-800/60 px-1.5 py-0.5 rounded'>em breve</span>
+        </a>
+    </nav>
+
+    <div class='mt-8 pt-6 border-t border-slate-800'>
+        <div class='mb-4 px-3'>
+            <p class='text-xs font-medium text-slate-500 uppercase tracking-wider'>Logado como</p>
+            <p class='mt-1 text-sm font-medium text-slate-200 truncate' title='{{ user.email }}'>{{ user.email }}</p>
+        </div>
+
+        <form method='post' action='{% url "logout" %}'>
+            {% csrf_token %}
+            <button type='submit'
+                    class='w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/60 hover:text-white transition-colors'>
+                <svg class='w-4 h-4 shrink-0' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+                    <path stroke-linecap='round' stroke-linejoin='round' d='M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1'/>
+                </svg>
+                Sair
+            </button>
+        </form>
+    </div>
+</aside>

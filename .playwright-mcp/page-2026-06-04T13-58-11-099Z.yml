@@ -1,0 +1,31 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Já existe uma categoria com este nome.
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Nova categoria" [level=1] [ref=e9]
+        - paragraph [ref=e10]: Cadastre uma nova categoria para classificar suas transações.
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: Nome
+          - textbox "Nome" [ref=e16]:
+            - /placeholder: "Ex.: Alimentação"
+            - text: Alimentação
+          - paragraph [ref=e17]: Já existe uma categoria com este nome.
+        - generic [ref=e18]:
+          - generic [ref=e19]: Tipo
+          - combobox "Tipo" [ref=e20]:
+            - option "---------"
+            - option "Receita"
+            - option "Despesa" [selected]
+          - paragraph [ref=e21]: Define se a categoria será usada para entradas ou saídas.
+        - generic [ref=e22]:
+          - generic [ref=e23]: Cor
+          - textbox "Cor" [ref=e26]: "#10b981"
+          - paragraph [ref=e27]: Escolha uma cor para identificar a categoria nos lançamentos.
+        - generic [ref=e28]:
+          - link "Cancelar" [ref=e29] [cursor=pointer]:
+            - /url: /categories/
+          - button "Salvar" [ref=e30] [cursor=pointer]

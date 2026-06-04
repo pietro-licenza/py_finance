@@ -26,8 +26,8 @@ class CategoryForm(forms.ModelForm):
                 'class': (
                     'w-full px-4 py-2 bg-slate-800/60 border border-slate-700 '
                     'rounded-lg text-slate-100 placeholder-slate-500 '
-                    'focus:outline-none focus:ring-2 focus:ring-violet-500 '
-                    'focus:border-transparent transition'
+                    'focus:outline-none focus:ring-2 focus:ring-indigo-500 '
+                    'focus:border-indigo-500 transition'
                 ),
                 'placeholder': 'Ex.: Alimentação',
             }),
@@ -35,15 +35,15 @@ class CategoryForm(forms.ModelForm):
                 'class': (
                     'w-full px-4 py-2 bg-slate-800/60 border border-slate-700 '
                     'rounded-lg text-slate-100 focus:outline-none '
-                    'focus:ring-2 focus:ring-violet-500 focus:border-transparent '
+                    'focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 '
                     'transition'
                 ),
             }),
             'color': forms.ColorInput(attrs={
                 'class': (
                     'h-12 w-20 cursor-pointer bg-slate-800/60 border border-slate-700 '
-                    'rounded-lg p-1 focus:outline-none focus:ring-2 focus:ring-violet-500 '
-                    'focus:border-transparent transition'
+                    'rounded-lg p-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 '
+                    'focus:border-indigo-500 transition'
                 ),
             }),
         }

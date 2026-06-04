@@ -1,0 +1,32 @@
+- main [ref=e2]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: F
+      - generic [ref=e10]: Finanpy
+    - heading "Controle suas finanças em um só lugar" [level=1] [ref=e11]:
+      - text: Controle suas finanças
+      - generic [ref=e12]: em um só lugar
+    - paragraph [ref=e13]: Organize contas, categorias e transações em uma interface simples e elegante. Comece grátis em menos de um minuto.
+    - generic [ref=e14]:
+      - link "Criar Conta Grátis" [ref=e15] [cursor=pointer]:
+        - /url: /auth/signup/
+      - link "Já tenho conta" [ref=e16] [cursor=pointer]:
+        - /url: /auth/login/
+    - paragraph [ref=e17]: Sem cartão de crédito. Sem spam.
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - heading "Tudo que você precisa" [level=2] [ref=e20]
+      - paragraph [ref=e21]: Funcionalidades pensadas para o dia a dia financeiro.
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - img [ref=e25]
+        - heading "Contas bancárias" [level=3] [ref=e27]
+        - paragraph [ref=e28]: Cadastre contas correntes, poupanças e carteiras. Acompanhe saldos em tempo real.
+      - generic [ref=e29]:
+        - img [ref=e31]
+        - heading "Categorias personalizadas" [level=3] [ref=e33]
+        - paragraph [ref=e34]: Crie categorias de receitas e despesas com cores. Categorias padrão já vêm prontas.
+      - generic [ref=e35]:
+        - img [ref=e37]
+        - heading "Transações detalhadas" [level=3] [ref=e39]
+        - paragraph [ref=e40]: Registre cada entrada e saída com data, conta, categoria e descrição. Filtros e busca.

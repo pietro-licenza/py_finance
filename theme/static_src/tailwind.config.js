@@ -41,6 +41,12 @@ module.exports = {
          */
         // '../../**/*.py'
     ],
+    safelist: [
+        'focus:ring-indigo-500',
+        'focus:border-indigo-500',
+        'focus:ring-offset-2',
+        'focus:ring-offset-slate-900',
+    ],
     theme: {
         extend: {},
     },

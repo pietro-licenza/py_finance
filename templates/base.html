@@ -4,7 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta name='description' content='Finanpy - Sistema de gestão financeira pessoal'>
+    <meta name='description' content='Finanpy - Sistema de gestao financeira pessoal'>
     <title>{% block title %}Finanpy{% endblock %}</title>
 
     {# Inline SVG favicon so the browser doesn't hit a 404 for /favicon.ico. #}
@@ -23,9 +23,9 @@
             {% for message in messages %}
                 <div role='alert'
                      class='flex items-start justify-between px-4 py-3 rounded-lg shadow-lg border text-sm
-                            {% if message.tags == 'success' %}bg-emerald-500/10 border-emerald-500/30 text-emerald-300
-                            {% elif message.tags == 'error' %}bg-rose-500/10 border-rose-500/30 text-rose-300
-                            {% elif message.tags == 'warning' %}bg-amber-500/10 border-amber-500/30 text-amber-300
+                            {% if message.tags == "success" %}bg-emerald-500/10 border-emerald-500/30 text-emerald-300
+                            {% elif message.tags == "error" %}bg-rose-500/10 border-rose-500/30 text-rose-300
+                            {% elif message.tags == "warning" %}bg-amber-500/10 border-amber-500/30 text-amber-300
                             {% else %}bg-indigo-500/10 border-indigo-500/30 text-indigo-300{% endif %}'>
                     <span class='flex-1'>{{ message }}</span>
                     <button type='button'

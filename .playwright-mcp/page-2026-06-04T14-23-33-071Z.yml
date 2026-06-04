@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - text: "{# Toasts em body-level para que o fixed top-right sobreponha o shell sem deslocar o conteudo. Mantido como na versao anterior. #}"
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: F
+      - generic [ref=e9]: Finanpy
+    - heading "Controle suas finanças em um só lugar" [level=1] [ref=e10]:
+      - text: Controle suas finanças
+      - generic [ref=e11]: em um só lugar
+    - paragraph [ref=e12]: Organize contas, categorias e transações em uma interface simples e elegante. Comece grátis em menos de um minuto.
+    - generic [ref=e13]:
+      - link "Criar Conta Grátis" [ref=e14] [cursor=pointer]:
+        - /url: /auth/signup/
+      - link "Já tenho conta" [ref=e15] [cursor=pointer]:
+        - /url: /auth/login/
+    - paragraph [ref=e16]: Sem cartão de crédito. Sem spam.
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - heading "Tudo que você precisa" [level=2] [ref=e19]
+      - paragraph [ref=e20]: Funcionalidades pensadas para o dia a dia financeiro.
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - img [ref=e24]
+        - heading "Contas bancárias" [level=3] [ref=e26]
+        - paragraph [ref=e27]: Cadastre contas correntes, poupanças e carteiras. Acompanhe saldos em tempo real.
+      - generic [ref=e28]:
+        - img [ref=e30]
+        - heading "Categorias personalizadas" [level=3] [ref=e32]
+        - paragraph [ref=e33]: Crie categorias de receitas e despesas com cores. Categorias padrão já vêm prontas.
+      - generic [ref=e34]:
+        - img [ref=e36]
+        - heading "Transações detalhadas" [level=3] [ref=e38]
+        - paragraph [ref=e39]: Registre cada entrada e saída com data, conta, categoria e descrição. Filtros e busca.

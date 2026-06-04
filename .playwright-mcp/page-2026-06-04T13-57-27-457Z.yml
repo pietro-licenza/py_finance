@@ -1,0 +1,26 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Editar categoria" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Atualize os dados da categoria selecionada.
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: Nome
+        - textbox "Nome" [ref=e12]:
+          - /placeholder: "Ex.: Alimentação"
+          - text: Comissões
+      - generic [ref=e13]:
+        - generic [ref=e14]: Tipo
+        - combobox "Tipo" [ref=e15]:
+          - option "---------"
+          - option "Receita" [selected]
+          - option "Despesa"
+        - paragraph [ref=e16]: Define se a categoria será usada para entradas ou saídas.
+      - generic [ref=e17]:
+        - generic [ref=e18]: Cor
+        - textbox "Cor" [ref=e21]: "#a855f7"
+        - paragraph [ref=e22]: Escolha uma cor para identificar a categoria nos lançamentos.
+      - generic [ref=e23]:
+        - link "Cancelar" [ref=e24] [cursor=pointer]:
+          - /url: /categories/
+        - button "Salvar" [ref=e25] [cursor=pointer]

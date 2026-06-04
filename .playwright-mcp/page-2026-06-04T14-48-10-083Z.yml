@@ -1,0 +1,47 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e3]:
+    - generic [ref=e4]: Conta criada com sucesso. Bem-vindo ao Finanpy!
+    - button "Fechar" [ref=e5] [cursor=pointer]: ×
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - text: "{# Sidebar do shell autenticado. Incluido a partir de base.html quando user.is_authenticated. Resolve o item ativo via request.resolver_match (server-side, sem JS). O link de Transacoes usa '#' como placeholder ate a Sprint 4 conectar transactions:transaction_list em core/urls.py. #}"
+      - complementary [ref=e8]:
+        - link "F Finanpy" [ref=e9] [cursor=pointer]:
+          - /url: /dashboard/
+          - generic [ref=e10]: F
+          - generic [ref=e11]: Finanpy
+        - navigation "Navegacao principal" [ref=e12]:
+          - link "Dashboard" [ref=e13] [cursor=pointer]:
+            - /url: /dashboard/
+            - img [ref=e14]
+            - text: Dashboard
+          - link "Contas" [ref=e16] [cursor=pointer]:
+            - /url: /accounts/
+            - img [ref=e17]
+            - text: Contas
+          - link "Categorias" [ref=e19] [cursor=pointer]:
+            - /url: /categories/
+            - img [ref=e20]
+            - text: Categorias
+          - link "Transacoes em breve" [disabled] [ref=e22]:
+            - /url: "#"
+            - img [ref=e23]
+            - text: Transacoes
+            - generic [ref=e25]: em breve
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: Logado como
+            - paragraph [ref=e29]: sprint3-final-d-1780584472@finanpy.com
+          - button "Sair" [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Sair
+      - generic [ref=e36]:
+        - generic:
+          - generic:
+            - generic [ref=e37]: F
+            - generic [ref=e38]: Finanpy
+          - heading "Bem-vindo, sprint3-final-d-1780584472@finanpy.com" [level=1]:
+            - text: Bem-vindo,
+            - generic: sprint3-final-d-1780584472@finanpy.com
+          - paragraph: Você está autenticado. Esta é uma página temporária da Sprint 1 — o dashboard completo com contas, categorias e transações chega na Sprint 5.
+          - button "Sair" [ref=e39] [cursor=pointer]
