@@ -654,18 +654,18 @@
 - [X] 3.5.11: Usar cores diferentes para entrada (verde) e saída (vermelho)
 - [X] Tarefa 3.5 concluída
 
-#### Tarefa 3.6: View de Criação de Categoria
+#### Tarefa 3.6: View de Criação de Categoria ✅ CONCLUÍDA
 **Descrição**: Criar view para cadastrar categoria
 
 **Subtarefas**:
-- [ ] 3.6.1: No `categories/views.py`, importar CreateView
-- [ ] 3.6.2: Importar CategoryForm
-- [ ] 3.6.3: Criar CategoryCreateView
-- [ ] 3.6.4: Configurar model, form_class e template_name
-- [ ] 3.6.5: Configurar success_url
-- [ ] 3.6.6: Override form_valid para associar usuário
-- [ ] 3.6.7: Adicionar mensagem de sucesso
-- [ ] 3.6.8: Adicionar tratamento de erro para nome duplicado
+- [X] 3.6.1: No `categories/views.py`, importar CreateView
+- [X] 3.6.2: Importar CategoryForm
+- [X] 3.6.3: Criar CategoryCreateView
+- [X] 3.6.4: Configurar model, form_class e template_name
+- [X] 3.6.5: Configurar success_url
+- [X] 3.6.6: Override form_valid para associar usuário
+- [X] 3.6.7: Adicionar mensagem de sucesso
+- [X] 3.6.8: Adicionar tratamento de erro para nome duplicado
 
 #### Tarefa 3.7: View de Edição de Categoria
 **Descrição**: Criar view para editar categoria
