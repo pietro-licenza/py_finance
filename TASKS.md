@@ -708,14 +708,14 @@
 - [X] 3.10.2: Adicionar paths para todas as views
 - [X] 3.10.3: Incluir no `core/urls.py`
 
-#### Tarefa 3.11: Migration de Category
+#### Tarefa 3.11: Migration de Category ✅ CONCLUÍDA
 **Descrição**: Criar e aplicar migrations
 
 **Subtarefas**:
-- [ ] 3.11.1: Executar makemigrations
-- [ ] 3.11.2: Verificar migration
-- [ ] 3.11.3: Executar migrate
-- [ ] 3.11.4: Verificar no banco
+- [X] 3.11.1: Executar makemigrations
+- [X] 3.11.2: Verificar migration
+- [X] 3.11.3: Executar migrate
+- [X] 3.11.4: Verificar no banco
 
 #### Tarefa 3.12: Categorias Padrão
 **Descrição**: Criar signal para adicionar categorias padrão ao novo usuário
