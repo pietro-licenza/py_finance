@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Sum
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, UpdateView
 
 from .forms import AccountForm
 from .models import Account
@@ -96,4 +96,62 @@ class AccountCreateView(LoginRequiredMixin, CreateView):
         """
         context = super().get_context_data(**kwargs)
         context['page_title'] = 'Nova conta'
+        return context
+
+
+class AccountUpdateView(LoginRequiredMixin, UpdateView):
+    """Edit an account owned by the logged-in user.
+
+    The view reuses `AccountForm` (same editable fields as create) and
+    the same `account_form.html` template. Per-user isolation is
+    enforced by overriding `get_queryset` to return only the
+    authenticated user's accounts: when Django resolves the `<int:pk>`
+    from the URL through `SingleObjectMixin.get_object`, a foreign pk
+    yields no match and Django raises `Http404`, so a user can never
+    reach or mutate another user's account.
+    """
+
+    model = Account
+    form_class = AccountForm
+    template_name = 'accounts/account_form.html'
+    # Same caveat as `AccountCreateView`: the namespace `accounts:` is
+    # introduced by Tarefa 2.11.
+    success_url = reverse_lazy('accounts:account_list')
+
+    def get_queryset(self):
+        """Return only the accounts owned by the logged-in user.
+
+        This is what implements per-user isolation on update: a user
+        who passes another user's pk in the URL gets a 404 because
+        `SingleObjectMixin.get_object` cannot find the object in the
+        filtered queryset.
+        """
+        return Account.objects.filter(user=self.request.user)
+
+    def form_valid(self, form):
+        """Persist the edit and notify the user.
+
+        The `user` FK and audit fields are not on the form, so we do
+        not need to re-bind the user here — the filtered `get_queryset`
+        guarantees the instance already belongs to `self.request.user`,
+        and the `updated_at` field is refreshed automatically by
+        `auto_now=True`. The `balance` field is editable on this form
+        because it represents the account's own opening/edited balance,
+        not a transaction effect; balance changes driven by
+        transactions are applied exclusively in
+        `transactions/signals.py`.
+        """
+        response = super().form_valid(form)
+        messages.success(self.request, 'Conta atualizada com sucesso.')
+        return response
+
+    def get_context_data(self, **kwargs):
+        """Expose a page title for the form template.
+
+        Mirrors `AccountCreateView` so the same `account_form.html`
+        renders the correct heading for each action. The form template
+        can read `page_title` to display "Editar conta" here.
+        """
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = 'Editar conta'
         return context
