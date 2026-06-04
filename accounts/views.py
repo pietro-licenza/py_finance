@@ -1,7 +1,7 @@
 """Views for the accounts app.
 
 Read-only listing is provided by `AccountListView`; creation, update
-and deletion are scheduled for later sprints.
+and deletion round out the CRUD set.
 """
 
 from decimal import Decimal
@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Sum
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 
 from .forms import AccountForm
 from .models import Account
@@ -155,3 +155,74 @@ class AccountUpdateView(LoginRequiredMixin, UpdateView):
         context = super().get_context_data(**kwargs)
         context['page_title'] = 'Editar conta'
         return context
+
+
+class AccountDeleteView(LoginRequiredMixin, DeleteView):
+    """Delete an account owned by the logged-in user.
+
+    Renders `accounts/account_confirm_delete.html` on GET and deletes
+    the matched `Account` on POST, then redirects to
+    `accounts:account_list` (the URL name wired in Tarefa 2.11).
+
+    Per-user isolation is enforced by `get_queryset`: when Django
+    resolves the `<int:pk>` from the URL through
+    `SingleObjectMixin.get_object`, a foreign pk yields no match and
+    Django raises `Http404`, mirroring the behaviour of
+    `AccountUpdateView`. An unauthenticated request is redirected to
+    the login page by `LoginRequiredMixin`.
+
+    Note on transaction-related validation
+    -------------------------------------
+    The rule "cannot delete an account that still has transactions" is
+    intentionally NOT enforced here. The `Transaction` model does not
+    exist yet (it is introduced in Sprint 4) and the related balance
+    signals are wired in Tarefa 4.2, so the necessary relationship
+    lookup cannot be performed today. Adding a placeholder would
+    either reference a model that does not exist or rely on a manager
+    that would not catch a delete in the `transactions` app later.
+
+    The validation must be re-introduced once the `Transaction` model
+    exists (see TASKS.md item 6.1.1 - "Validar que não é possível
+    excluir conta com transações"). The recommended implementation
+    is to override `delete()` (or `form_valid` / `post`) on this view
+    to check `self.get_object().transactions.exists()` and, if any
+    exist, call `messages.error(...)` and redirect back to
+    `accounts:account_list` instead of calling `super().delete()`.
+    """
+
+    model = Account
+    template_name = 'accounts/account_confirm_delete.html'
+    # Same caveat as `AccountCreateView` / `AccountUpdateView`: the
+    # namespace `accounts:` is introduced by Tarefa 2.11.
+    success_url = reverse_lazy('accounts:account_list')
+
+    def get_queryset(self):
+        """Return only the accounts owned by the logged-in user.
+
+        This is what implements per-user isolation on delete: a user
+        who passes another user's pk in the URL gets a 404 because
+        `SingleObjectMixin.get_object` cannot find the object in the
+        filtered queryset.
+        """
+        return Account.objects.filter(user=self.request.user)
+
+    def delete(self, request, *args, **kwargs):
+        """Delete the account and notify the user.
+
+        `DeleteView.delete` (from `DeletionMixin`) performs the actual
+        `model.delete()` call, returns the redirect response, and
+        already enqueues nothing in `django.contrib.messages` by
+        default. We override it so we can add the success message
+        before the redirect is returned. The user is bound through
+        `get_queryset` (a foreign pk is a 404), and balance sync is
+        unaffected: deletion of an `Account` does not mutate any
+        other account's balance, and the `Transaction` model does not
+        exist yet, so there are no balance-reversal signals to worry
+        about here. If the "block delete if has transactions" rule is
+        added later, the check should live in this method (or a hook
+        called from it) so the message-and-redirect path stays in one
+        place.
+        """
+        response = super().delete(request, *args, **kwargs)
+        messages.success(self.request, 'Conta excluída com sucesso.')
+        return response
