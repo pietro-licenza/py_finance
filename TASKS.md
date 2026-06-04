@@ -688,17 +688,17 @@
 - [X] 3.8.5: Adicionar mensagem de sucesso
 - [X] 3.8.6: Adicionar validação para não excluir categoria com transações
 
-#### Tarefa 3.9: Templates de Form e Delete de Categoria
+#### Tarefa 3.9: Templates de Form e Delete de Categoria ✅ CONCLUÍDA
 **Descrição**: Criar templates para forms de categoria
 
 **Subtarefas**:
-- [ ] 3.9.1: Criar `templates/categories/category_form.html`
-- [ ] 3.9.2: Extender base e criar formulário estilizado
-- [ ] 3.9.3: Adicionar preview da cor selecionada
-- [ ] 3.9.4: Adicionar botões de ação
-- [ ] 3.9.5: Criar `templates/categories/category_confirm_delete.html`
-- [ ] 3.9.6: Adicionar mensagem de confirmação
-- [ ] 3.9.7: Estilizar com cores de alerta
+- [X] 3.9.1: Criar `templates/categories/category_form.html`
+- [X] 3.9.2: Extender base e criar formulário estilizado
+- [X] 3.9.3: Adicionar preview da cor selecionada
+- [X] 3.9.4: Adicionar botões de ação
+- [X] 3.9.5: Criar `templates/categories/category_confirm_delete.html`
+- [X] 3.9.6: Adicionar mensagem de confirmação
+- [X] 3.9.7: Estilizar com cores de alerta
 
 #### Tarefa 3.10: URLs de Categories
 **Descrição**: Configurar URLs para views de categorias
