@@ -1,7 +1,7 @@
 ---
 description: Use this agent for any Django back-end work on Finanpy — models, class-based views, signals, auth-by-email, forms, URLs, migrations, settings. Always consults Context7 for current Django 6.0.x API references before writing non-trivial code.
 mode: subagent
-model: zhipuai/glm-5.1
+model: glm-5.1
 color: info
 permission:
   edit: allow
