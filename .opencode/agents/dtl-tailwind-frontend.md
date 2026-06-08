@@ -1,7 +1,7 @@
 ---
 description: Use this agent for any user-facing HTML in Finanpy — base layout, public pages (landing, signup, login), authenticated screens (dashboard, CRUD list/form/delete), reusable partials. Enforces the dark Design System and pt-BR copy with pixel precision.
 mode: subagent
-model: glm-5.1
+model: opencode-go/glm-5.1
 color: '#8B5CF6'
 permission:
   edit: allow

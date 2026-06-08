@@ -1,7 +1,7 @@
 ---
 description: Use this agent for end-to-end functional and visual validation of the Finanpy app. Drives a real browser through the Playwright MCP, runs the F-01..F-09 and V-01..V-10 scenarios, and reports bugs with evidence.
 mode: subagent
-model: glm-5.1
+model: opencode-go/glm-5.1
 color: '#10B981'
 permission:
   edit: allow
